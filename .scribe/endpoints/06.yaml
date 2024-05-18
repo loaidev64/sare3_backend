@@ -1,0 +1,579 @@
+name: Order
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/orders
+    metadata:
+      groupName: Order
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Class \"App\\Http\\Resources\\OrderItemCollection\" not found",
+              "exception": "Error",
+              "file": "/home/loaidev/Projects/Laravel/sare3_backend/app/Http/Resources/OrderResource.php",
+              "line": 18,
+              "trace": [
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php",
+                      "line": 107,
+                      "function": "toArray",
+                      "class": "App\\Http\\Resources\\OrderResource",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php",
+                      "line": 254,
+                      "function": "resolve",
+                      "class": "Illuminate\\Http\\Resources\\Json\\JsonResource",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php",
+                      "line": 932,
+                      "function": "jsonSerialize",
+                      "class": "Illuminate\\Http\\Resources\\Json\\JsonResource",
+                      "type": "->"
+                  },
+                  {
+                      "function": "Illuminate\\Support\\Traits\\{closure}",
+                      "class": "Illuminate\\Support\\Collection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php",
+                      "line": 930,
+                      "function": "array_map"
+                  },
+                  {
+                      "function": "jsonSerialize",
+                      "class": "Illuminate\\Support\\Collection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/JsonResponse.php",
+                      "line": 86,
+                      "function": "json_encode"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/http-foundation/JsonResponse.php",
+                      "line": 49,
+                      "function": "setData",
+                      "class": "Illuminate\\Http\\JsonResponse",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/JsonResponse.php",
+                      "line": 32,
+                      "function": "__construct",
+                      "class": "Symfony\\Component\\HttpFoundation\\JsonResponse",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php",
+                      "line": 102,
+                      "function": "__construct",
+                      "class": "Illuminate\\Http\\JsonResponse",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/ResourceResponse.php",
+                      "line": 37,
+                      "function": "json",
+                      "class": "Illuminate\\Routing\\ResponseFactory",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php",
+                      "line": 244,
+                      "function": "toResponse",
+                      "class": "Illuminate\\Http\\Resources\\Json\\ResourceResponse",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/ResourceCollection.php",
+                      "line": 117,
+                      "function": "toResponse",
+                      "class": "Illuminate\\Http\\Resources\\Json\\JsonResource",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 900,
+                      "function": "toResponse",
+                      "class": "Illuminate\\Http\\Resources\\Json\\ResourceCollection",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 885,
+                      "function": "toResponse",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 805,
+                      "function": "prepareResponse",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 144,
+                      "function": "Illuminate\\Routing\\{closure}",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 119,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 805,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 784,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 748,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php",
+                      "line": 737,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 144,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php",
+                      "line": 19,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Livewire\\Features\\SupportDisablingBackButtonCache\\DisableBackButtonCacheMiddleware",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php",
+                      "line": 51,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php",
+                      "line": 110,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php",
+                      "line": 57,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 183,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php",
+                      "line": 119,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 300,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 288,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 91,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 44,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 236,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 163,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 125,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 72,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php",
+                      "line": 50,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php",
+                      "line": 53,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php",
+                      "line": 35,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/Container.php",
+                      "line": 662,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 212,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Command/Command.php",
+                      "line": 279,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Console/Command.php",
+                      "line": 181,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Application.php",
+                      "line": 1049,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Application.php",
+                      "line": 318,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Application.php",
+                      "line": 169,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php",
+                      "line": 196,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php",
+                      "line": 1187,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "/home/loaidev/Projects/Laravel/sare3_backend/artisan",
+                      "line": 13,
+                      "function": "handleCommand",
+                      "class": "Illuminate\\Foundation\\Application",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/orders
+    metadata:
+      groupName: Order
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      user_id:
+        name: user_id
+        description: ''
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      user_id: 6
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

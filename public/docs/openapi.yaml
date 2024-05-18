@@ -1,0 +1,1363 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/banners:
+    get:
+      summary: ''
+      operationId: getApiBanners
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 6
+                      image: 'http://localhost/storage/voluptate'
+                    -
+                      id: 7
+                      image: 'http://localhost/storage/qui'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 6
+                        image: 'http://localhost/storage/voluptate'
+                      -
+                        id: 7
+                        image: 'http://localhost/storage/qui'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 6
+                        image:
+                          type: string
+                          example: 'http://localhost/storage/voluptate'
+      tags:
+        - Banner
+      security: []
+  /api/brands:
+    get:
+      summary: ''
+      operationId: getApiBrands
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 6
+                      image: quia
+                      name: 'Prof. Elwyn Morissette'
+                      address: 'Repellat sit suscipit et sunt aut aspernatur est ipsum. Aliquam iste vel quasi autem quidem aut quia. Illum placeat ipsam ab deleniti.'
+                      telephone: et
+                      phone: '+15314788169'
+                      description: 'Occaecati quibusdam atque eum sed ut quo quidem. Ut qui vel amet ex et. Hic recusandae voluptatibus est quia tempore. Nulla maiores ut pariatur ducimus nulla delectus dignissimos.'
+                    -
+                      id: 7
+                      image: reiciendis
+                      name: 'Dr. Laurianne Hilpert'
+                      address: 'Quisquam unde sed accusantium et. Nostrum ducimus harum minus itaque. Tenetur sapiente quia ex dolorem at alias.'
+                      telephone: nobis
+                      phone: 401-679-1045
+                      description: 'Ducimus culpa consectetur et delectus temporibus animi. Odit est est earum atque. Omnis itaque maxime aut eligendi mollitia aut.'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 6
+                        image: quia
+                        name: 'Prof. Elwyn Morissette'
+                        address: 'Repellat sit suscipit et sunt aut aspernatur est ipsum. Aliquam iste vel quasi autem quidem aut quia. Illum placeat ipsam ab deleniti.'
+                        telephone: et
+                        phone: '+15314788169'
+                        description: 'Occaecati quibusdam atque eum sed ut quo quidem. Ut qui vel amet ex et. Hic recusandae voluptatibus est quia tempore. Nulla maiores ut pariatur ducimus nulla delectus dignissimos.'
+                      -
+                        id: 7
+                        image: reiciendis
+                        name: 'Dr. Laurianne Hilpert'
+                        address: 'Quisquam unde sed accusantium et. Nostrum ducimus harum minus itaque. Tenetur sapiente quia ex dolorem at alias.'
+                        telephone: nobis
+                        phone: 401-679-1045
+                        description: 'Ducimus culpa consectetur et delectus temporibus animi. Odit est est earum atque. Omnis itaque maxime aut eligendi mollitia aut.'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 6
+                        image:
+                          type: string
+                          example: quia
+                        name:
+                          type: string
+                          example: 'Prof. Elwyn Morissette'
+                        address:
+                          type: string
+                          example: 'Repellat sit suscipit et sunt aut aspernatur est ipsum. Aliquam iste vel quasi autem quidem aut quia. Illum placeat ipsam ab deleniti.'
+                        telephone:
+                          type: string
+                          example: et
+                        phone:
+                          type: string
+                          example: '+15314788169'
+                        description:
+                          type: string
+                          example: 'Occaecati quibusdam atque eum sed ut quo quidem. Ut qui vel amet ex et. Hic recusandae voluptatibus est quia tempore. Nulla maiores ut pariatur ducimus nulla delectus dignissimos.'
+      tags:
+        - Brand
+      security: []
+  /api/carts:
+    get:
+      summary: ''
+      operationId: getApiCarts
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data: []
+                properties:
+                  data:
+                    type: array
+                    example: []
+      tags:
+        - Cart
+      security: []
+    post:
+      summary: ''
+      operationId: postApiCarts
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Cart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  description: ''
+                  example: 2
+                product_id:
+                  type: integer
+                  description: ''
+                  example: 13
+                quantity:
+                  type: number
+                  description: ''
+                  example: 12.0
+              required:
+                - user_id
+                - product_id
+                - quantity
+      security: []
+  '/api/carts/{id}':
+    put:
+      summary: ''
+      operationId: putApiCartsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Cart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  description: ''
+                  example: 5
+                product_id:
+                  type: integer
+                  description: ''
+                  example: 16
+                quantity:
+                  type: number
+                  description: ''
+                  example: 327.49126555
+              required:
+                - user_id
+                - product_id
+                - quantity
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the cart.'
+        example: 10
+        required: true
+        schema:
+          type: integer
+  /api/categories:
+    get:
+      summary: ''
+      operationId: getApiCategories
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 6
+                      name: 'Prof. Meredith Daniel'
+                    -
+                      id: 7
+                      name: 'Miss Jacynthe Waelchi'
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 6
+                        name: 'Prof. Meredith Daniel'
+                      -
+                        id: 7
+                        name: 'Miss Jacynthe Waelchi'
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 6
+                        name:
+                          type: string
+                          example: 'Prof. Meredith Daniel'
+      tags:
+        - Category
+      security: []
+  /api/user:
+    get:
+      summary: ''
+      operationId: getApiUser
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/orders:
+    get:
+      summary: ''
+      operationId: getApiOrders
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Class "App\Http\Resources\OrderItemCollection" not found'
+                  exception: Error
+                  file: /home/loaidev/Projects/Laravel/sare3_backend/app/Http/Resources/OrderResource.php
+                  line: 18
+                  trace:
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php
+                      line: 107
+                      function: toArray
+                      class: App\Http\Resources\OrderResource
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php
+                      line: 254
+                      function: resolve
+                      class: Illuminate\Http\Resources\Json\JsonResource
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php
+                      line: 932
+                      function: jsonSerialize
+                      class: Illuminate\Http\Resources\Json\JsonResource
+                      type: '->'
+                    -
+                      function: 'Illuminate\Support\Traits\{closure}'
+                      class: Illuminate\Support\Collection
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php
+                      line: 930
+                      function: array_map
+                    -
+                      function: jsonSerialize
+                      class: Illuminate\Support\Collection
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/JsonResponse.php
+                      line: 86
+                      function: json_encode
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/http-foundation/JsonResponse.php
+                      line: 49
+                      function: setData
+                      class: Illuminate\Http\JsonResponse
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/JsonResponse.php
+                      line: 32
+                      function: __construct
+                      class: Symfony\Component\HttpFoundation\JsonResponse
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php
+                      line: 102
+                      function: __construct
+                      class: Illuminate\Http\JsonResponse
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/ResourceResponse.php
+                      line: 37
+                      function: json
+                      class: Illuminate\Routing\ResponseFactory
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php
+                      line: 244
+                      function: toResponse
+                      class: Illuminate\Http\Resources\Json\ResourceResponse
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/ResourceCollection.php
+                      line: 117
+                      function: toResponse
+                      class: Illuminate\Http\Resources\Json\JsonResource
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 900
+                      function: toResponse
+                      class: Illuminate\Http\Resources\Json\ResourceCollection
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 885
+                      function: toResponse
+                      class: Illuminate\Routing\Router
+                      type: '::'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 805
+                      function: prepareResponse
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 144
+                      function: 'Illuminate\Routing\{closure}'
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                      line: 50
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Routing\Middleware\SubstituteBindings
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 119
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 805
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 784
+                      function: runRouteWithinStack
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 748
+                      function: runRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                      line: 737
+                      function: dispatchToRoute
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 200
+                      function: dispatch
+                      class: Illuminate\Routing\Router
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 144
+                      function: 'Illuminate\Foundation\Http\{closure}'
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php
+                      line: 19
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                      line: 31
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                      line: 21
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                      line: 51
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php
+                      line: 27
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Http\Middleware\ValidatePostSize
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                      line: 110
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                      line: 62
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Http\Middleware\HandleCors
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                      line: 57
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 183
+                      function: handle
+                      class: Illuminate\Http\Middleware\TrustProxies
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                      line: 119
+                      function: 'Illuminate\Pipeline\{closure}'
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 175
+                      function: then
+                      class: Illuminate\Pipeline\Pipeline
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                      line: 144
+                      function: sendRequestThroughRouter
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 300
+                      function: handle
+                      class: Illuminate\Foundation\Http\Kernel
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 288
+                      function: callLaravelOrLumenRoute
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 91
+                      function: makeApiCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 44
+                      function: makeResponseCall
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                      line: 35
+                      function: makeResponseCallIfConditionsPass
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 236
+                      function: __invoke
+                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 163
+                      function: iterateThroughStrategies
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                      line: 95
+                      function: fetchResponses
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 125
+                      function: processRoute
+                      class: Knuckles\Scribe\Extracting\Extractor
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 72
+                      function: extractEndpointsInfoFromLaravelApp
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                      line: 50
+                      function: extractEndpointsInfoAndWriteToDisk
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                      line: 53
+                      function: get
+                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 36
+                      function: handle
+                      class: Knuckles\Scribe\Commands\GenerateDocumentation
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                      line: 41
+                      function: 'Illuminate\Container\{closure}'
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 93
+                      function: unwrapIfClosure
+                      class: Illuminate\Container\Util
+                      type: '::'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                      line: 35
+                      function: callBoundMethod
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                      line: 662
+                      function: call
+                      class: Illuminate\Container\BoundMethod
+                      type: '::'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 212
+                      function: call
+                      class: Illuminate\Container\Container
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Command/Command.php
+                      line: 279
+                      function: execute
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                      line: 181
+                      function: run
+                      class: Symfony\Component\Console\Command\Command
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Application.php
+                      line: 1049
+                      function: run
+                      class: Illuminate\Console\Command
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Application.php
+                      line: 318
+                      function: doRunCommand
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Application.php
+                      line: 169
+                      function: doRun
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                      line: 196
+                      function: run
+                      class: Symfony\Component\Console\Application
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php
+                      line: 1187
+                      function: handle
+                      class: Illuminate\Foundation\Console\Kernel
+                      type: '->'
+                    -
+                      file: /home/loaidev/Projects/Laravel/sare3_backend/artisan
+                      line: 13
+                      function: handleCommand
+                      class: Illuminate\Foundation\Application
+                      type: '->'
+                properties:
+                  message:
+                    type: string
+                    example: 'Class "App\Http\Resources\OrderItemCollection" not found'
+                  exception:
+                    type: string
+                    example: Error
+                  file:
+                    type: string
+                    example: /home/loaidev/Projects/Laravel/sare3_backend/app/Http/Resources/OrderResource.php
+                  line:
+                    type: integer
+                    example: 18
+                  trace:
+                    type: array
+                    example:
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php
+                        line: 107
+                        function: toArray
+                        class: App\Http\Resources\OrderResource
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php
+                        line: 254
+                        function: resolve
+                        class: Illuminate\Http\Resources\Json\JsonResource
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php
+                        line: 932
+                        function: jsonSerialize
+                        class: Illuminate\Http\Resources\Json\JsonResource
+                        type: '->'
+                      -
+                        function: 'Illuminate\Support\Traits\{closure}'
+                        class: Illuminate\Support\Collection
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php
+                        line: 930
+                        function: array_map
+                      -
+                        function: jsonSerialize
+                        class: Illuminate\Support\Collection
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/JsonResponse.php
+                        line: 86
+                        function: json_encode
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/http-foundation/JsonResponse.php
+                        line: 49
+                        function: setData
+                        class: Illuminate\Http\JsonResponse
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/JsonResponse.php
+                        line: 32
+                        function: __construct
+                        class: Symfony\Component\HttpFoundation\JsonResponse
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/ResponseFactory.php
+                        line: 102
+                        function: __construct
+                        class: Illuminate\Http\JsonResponse
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/ResourceResponse.php
+                        line: 37
+                        function: json
+                        class: Illuminate\Routing\ResponseFactory
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php
+                        line: 244
+                        function: toResponse
+                        class: Illuminate\Http\Resources\Json\ResourceResponse
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/ResourceCollection.php
+                        line: 117
+                        function: toResponse
+                        class: Illuminate\Http\Resources\Json\JsonResource
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 900
+                        function: toResponse
+                        class: Illuminate\Http\Resources\Json\ResourceCollection
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 885
+                        function: toResponse
+                        class: Illuminate\Routing\Router
+                        type: '::'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 805
+                        function: prepareResponse
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 144
+                        function: 'Illuminate\Routing\{closure}'
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php
+                        line: 50
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Routing\Middleware\SubstituteBindings
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 119
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 805
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 784
+                        function: runRouteWithinStack
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 748
+                        function: runRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Routing/Router.php
+                        line: 737
+                        function: dispatchToRoute
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 200
+                        function: dispatch
+                        class: Illuminate\Routing\Router
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 144
+                        function: 'Illuminate\Foundation\Http\{closure}'
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/livewire/livewire/src/Features/SupportDisablingBackButtonCache/DisableBackButtonCacheMiddleware.php
+                        line: 19
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Livewire\Features\SupportDisablingBackButtonCache\DisableBackButtonCacheMiddleware
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php
+                        line: 31
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php
+                        line: 21
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php
+                        line: 51
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php
+                        line: 27
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Http\Middleware\ValidatePostSize
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php
+                        line: 110
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php
+                        line: 62
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Http\Middleware\HandleCors
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php
+                        line: 57
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 183
+                        function: handle
+                        class: Illuminate\Http\Middleware\TrustProxies
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php
+                        line: 119
+                        function: 'Illuminate\Pipeline\{closure}'
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 175
+                        function: then
+                        class: Illuminate\Pipeline\Pipeline
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php
+                        line: 144
+                        function: sendRequestThroughRouter
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 300
+                        function: handle
+                        class: Illuminate\Foundation\Http\Kernel
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 288
+                        function: callLaravelOrLumenRoute
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 91
+                        function: makeApiCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 44
+                        function: makeResponseCall
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Strategies/Responses/ResponseCalls.php
+                        line: 35
+                        function: makeResponseCallIfConditionsPass
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 236
+                        function: __invoke
+                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 163
+                        function: iterateThroughStrategies
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Extracting/Extractor.php
+                        line: 95
+                        function: fetchResponses
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 125
+                        function: processRoute
+                        class: Knuckles\Scribe\Extracting\Extractor
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 72
+                        function: extractEndpointsInfoFromLaravelApp
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/GroupedEndpoints/GroupedEndpointsFromApp.php
+                        line: 50
+                        function: extractEndpointsInfoAndWriteToDisk
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/knuckleswtf/scribe/src/Commands/GenerateDocumentation.php
+                        line: 53
+                        function: get
+                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 36
+                        function: handle
+                        class: Knuckles\Scribe\Commands\GenerateDocumentation
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/Util.php
+                        line: 41
+                        function: 'Illuminate\Container\{closure}'
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 93
+                        function: unwrapIfClosure
+                        class: Illuminate\Container\Util
+                        type: '::'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php
+                        line: 35
+                        function: callBoundMethod
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Container/Container.php
+                        line: 662
+                        function: call
+                        class: Illuminate\Container\BoundMethod
+                        type: '::'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 212
+                        function: call
+                        class: Illuminate\Container\Container
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Command/Command.php
+                        line: 279
+                        function: execute
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Console/Command.php
+                        line: 181
+                        function: run
+                        class: Symfony\Component\Console\Command\Command
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Application.php
+                        line: 1049
+                        function: run
+                        class: Illuminate\Console\Command
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Application.php
+                        line: 318
+                        function: doRunCommand
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/symfony/console/Application.php
+                        line: 169
+                        function: doRun
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php
+                        line: 196
+                        function: run
+                        class: Symfony\Component\Console\Application
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php
+                        line: 1187
+                        function: handle
+                        class: Illuminate\Foundation\Console\Kernel
+                        type: '->'
+                      -
+                        file: /home/loaidev/Projects/Laravel/sare3_backend/artisan
+                        line: 13
+                        function: handleCommand
+                        class: Illuminate\Foundation\Application
+                        type: '->'
+                    items:
+                      type: object
+                      properties:
+                        file:
+                          type: string
+                          example: /home/loaidev/Projects/Laravel/sare3_backend/vendor/laravel/framework/src/Illuminate/Http/Resources/Json/JsonResource.php
+                        line:
+                          type: integer
+                          example: 107
+                        function:
+                          type: string
+                          example: toArray
+                        class:
+                          type: string
+                          example: App\Http\Resources\OrderResource
+                        type:
+                          type: string
+                          example: '->'
+      tags:
+        - Order
+      security: []
+    post:
+      summary: ''
+      operationId: postApiOrders
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: integer
+                  description: ''
+                  example: 6
+              required:
+                - user_id
+      security: []
+  /api/products:
+    get:
+      summary: ''
+      operationId: getApiProducts
+      description: ''
+      parameters:
+        -
+          in: query
+          name: search
+          description: 'the text that you want to search for'
+          example: test
+          required: false
+          schema:
+            type: string
+            description: 'the text that you want to search for'
+            example: test
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    -
+                      id: 6
+                      name: 'Lyla Robel'
+                      description: 'Doloremque officia ut et sunt. Voluptatem dolore velit dolorum iusto laborum blanditiis ut. Iure ad est omnis eveniet id. Rerum ducimus commodi sunt quaerat temporibus ea.'
+                      image: dolores
+                      regular_price: 3479361321
+                      sale_price: 3204078489
+                    -
+                      id: 7
+                      name: 'Prof. Rowan Hoppe Jr.'
+                      description: 'Rerum dicta illum aut minima. Porro unde laboriosam animi voluptatem ratione consequatur sint. Aspernatur cum sit nihil officia et. Ducimus ad maxime placeat molestiae quibusdam ipsum recusandae.'
+                      image: animi
+                      regular_price: 3172169492
+                      sale_price: 3756770442
+                properties:
+                  data:
+                    type: array
+                    example:
+                      -
+                        id: 6
+                        name: 'Lyla Robel'
+                        description: 'Doloremque officia ut et sunt. Voluptatem dolore velit dolorum iusto laborum blanditiis ut. Iure ad est omnis eveniet id. Rerum ducimus commodi sunt quaerat temporibus ea.'
+                        image: dolores
+                        regular_price: 3479361321
+                        sale_price: 3204078489
+                      -
+                        id: 7
+                        name: 'Prof. Rowan Hoppe Jr.'
+                        description: 'Rerum dicta illum aut minima. Porro unde laboriosam animi voluptatem ratione consequatur sint. Aspernatur cum sit nihil officia et. Ducimus ad maxime placeat molestiae quibusdam ipsum recusandae.'
+                        image: animi
+                        regular_price: 3172169492
+                        sale_price: 3756770442
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 6
+                        name:
+                          type: string
+                          example: 'Lyla Robel'
+                        description:
+                          type: string
+                          example: 'Doloremque officia ut et sunt. Voluptatem dolore velit dolorum iusto laborum blanditiis ut. Iure ad est omnis eveniet id. Rerum ducimus commodi sunt quaerat temporibus ea.'
+                        image:
+                          type: string
+                          example: dolores
+                        regular_price:
+                          type: integer
+                          example: 3479361321
+                        sale_price:
+                          type: integer
+                          example: 3204078489
+      tags:
+        - Product
+      security: []
+  '/api/products/{id}':
+    get:
+      summary: ''
+      operationId: getApiProductsId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 6
+                    name: 'Murphy Goodwin'
+                    description: 'Sint inventore ullam ipsa. Quisquam animi quia sit qui. Vitae facilis velit et quas cupiditate. Illum rerum commodi odit non rem est.'
+                    image: consequatur
+                    regular_price: 1957840976
+                    sale_price: 3291655524
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 6
+                      name:
+                        type: string
+                        example: 'Murphy Goodwin'
+                      description:
+                        type: string
+                        example: 'Sint inventore ullam ipsa. Quisquam animi quia sit qui. Vitae facilis velit et quas cupiditate. Illum rerum commodi odit non rem est.'
+                      image:
+                        type: string
+                        example: consequatur
+                      regular_price:
+                        type: integer
+                        example: 1957840976
+                      sale_price:
+                        type: integer
+                        example: 3291655524
+      tags:
+        - Product
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Banner
+    description: ''
+  -
+    name: Brand
+    description: ''
+  -
+    name: Cart
+    description: ''
+  -
+    name: Category
+    description: ''
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: Order
+    description: ''
+  -
+    name: Product
+    description: ''

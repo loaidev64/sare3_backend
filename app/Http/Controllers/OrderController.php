@@ -7,7 +7,9 @@ use App\Http\Resources\OrderCollection;
 use App\Http\Resources\OrderResource;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Group;
 
+#[Group("Order")]
 class OrderController extends Controller
 {
     public function index(Request $request): OrderCollection

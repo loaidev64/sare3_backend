@@ -8,7 +8,9 @@ use App\Http\Resources\CartCollection;
 use App\Http\Resources\CartResource;
 use App\Models\Cart;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Group;
 
+#[Group("Cart")]
 class CartController extends Controller
 {
     public function index(Request $request): CartCollection

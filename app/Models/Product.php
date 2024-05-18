@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use App\Traits\Traits\Models\HiddenTimestamps;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
     use HasFactory;
+    use HiddenTimestamps;
 
     /**
      * The attributes that are mass assignable.

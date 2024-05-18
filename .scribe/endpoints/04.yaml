@@ -1,0 +1,95 @@
+name: Product
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/products
+    metadata:
+      groupName: Product
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      search:
+        name: search
+        description: 'the text that you want to search for'
+        required: false
+        example: test
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanQueryParameters:
+      search: test
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":6,"name":"Lyla Robel","description":"Doloremque officia ut et sunt. Voluptatem dolore velit dolorum iusto laborum blanditiis ut. Iure ad est omnis eveniet id. Rerum ducimus commodi sunt quaerat temporibus ea.","image":"dolores","regular_price":3479361321,"sale_price":3204078489},{"id":7,"name":"Prof. Rowan Hoppe Jr.","description":"Rerum dicta illum aut minima. Porro unde laboriosam animi voluptatem ratione consequatur sint. Aspernatur cum sit nihil officia et. Ducimus ad maxime placeat molestiae quibusdam ipsum recusandae.","image":"animi","regular_price":3172169492,"sale_price":3756770442}]}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/products/{id}'
+    metadata:
+      groupName: Product
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":6,"name":"Murphy Goodwin","description":"Sint inventore ullam ipsa. Quisquam animi quia sit qui. Vitae facilis velit et quas cupiditate. Illum rerum commodi odit non rem est.","image":"consequatur","regular_price":1957840976,"sale_price":3291655524}}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

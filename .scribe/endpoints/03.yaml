@@ -1,0 +1,39 @@
+name: Brand
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/brands
+    metadata:
+      groupName: Brand
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":6,"image":"quia","name":"Prof. Elwyn Morissette","address":"Repellat sit suscipit et sunt aut aspernatur est ipsum. Aliquam iste vel quasi autem quidem aut quia. Illum placeat ipsam ab deleniti.","telephone":"et","phone":"+15314788169","description":"Occaecati quibusdam atque eum sed ut quo quidem. Ut qui vel amet ex et. Hic recusandae voluptatibus est quia tempore. Nulla maiores ut pariatur ducimus nulla delectus dignissimos."},{"id":7,"image":"reiciendis","name":"Dr. Laurianne Hilpert","address":"Quisquam unde sed accusantium et. Nostrum ducimus harum minus itaque. Tenetur sapiente quia ex dolorem at alias.","telephone":"nobis","phone":"401-679-1045","description":"Ducimus culpa consectetur et delectus temporibus animi. Odit est est earum atque. Omnis itaque maxime aut eligendi mollitia aut."}]}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
