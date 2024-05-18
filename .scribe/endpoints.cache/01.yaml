@@ -29,9 +29,9 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":6,"image":"http:\/\/localhost\/storage\/vitae"},{"id":7,"image":"http:\/\/localhost\/storage\/reiciendis"}]}'
+        content: '{"data":[{"id":7,"image":"http:\/\/127.0.0.1:8000\/storage\/sit"},{"id":8,"image":"http:\/\/127.0.0.1:8000\/storage\/provident"}]}'
         headers: []
-        description: ''
+        description: 'Get all banners'
         custom: []
     responseFields: []
     auth: []

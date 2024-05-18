@@ -13,7 +13,8 @@ class CategoryController extends Controller
 {
     #[ResponseFromApiResource(
         name: CategoryCollection::class,
-        model: Category::class
+        model: Category::class,
+        description: 'Get all categories'
     )]
     public function index(Request $request): CategoryCollection
     {

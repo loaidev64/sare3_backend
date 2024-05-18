@@ -29,9 +29,9 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":11,"image":"impedit","name":"Prof. Raul Konopelski V","address":"Numquam non explicabo laudantium vero. Neque cumque mollitia non sint. Cupiditate ipsum omnis ea aut. Vero qui ut necessitatibus non recusandae perferendis.","telephone":"facilis","phone":"(917) 485-9690","description":"Ut amet consequuntur praesentium illum similique et. Dolores temporibus ut ratione dolor maiores. Mollitia temporibus reprehenderit qui rerum ut voluptatum libero.","categories":[],"products":[]},{"id":12,"image":"aliquam","name":"Ms. Alisha Morar Sr.","address":"Consequuntur quis neque nobis et et. Repellat ad nihil est reprehenderit. Dolorem sed officiis et dolores eveniet. Dolores reiciendis ratione eos laudantium.","telephone":"quisquam","phone":"(863) 599-3531","description":"Laboriosam commodi assumenda voluptas perferendis magni dolor asperiores ut. Officia animi ducimus atque quia reprehenderit. Nesciunt non vitae laboriosam ab.","categories":[],"products":[]}]}'
+        content: '{"data":[{"id":11,"image":"et","name":"Adah Schaden","address":"Optio omnis illum similique eveniet. Quia magni soluta fugit quaerat sed ut quia beatae. Unde et laborum non sit.","telephone":"ad","phone":"(845) 347-5556","description":"Neque voluptatem recusandae quia hic earum. Non maiores cupiditate voluptatum sit. Natus blanditiis possimus dolorem temporibus consequuntur ut.","categories":[],"products":[]},{"id":12,"image":"aut","name":"Gia Orn","address":"Ex vel deleniti voluptates totam quisquam voluptates adipisci et. Vero dolorem aperiam ea dignissimos maxime rerum sunt. Omnis eum sit quasi quibusdam cumque cupiditate. Eum ad qui et explicabo.","telephone":"ea","phone":"951.338.6008","description":"Quo quia commodi quia ut rem. Qui sed corrupti minima dolorum et autem. Inventore vel ad voluptatem quo est. Beatae inventore qui pariatur nam ducimus ut consequuntur.","categories":[],"products":[]}]}'
         headers: []
-        description: ''
+        description: 'Get all brands'
         custom: []
     responseFields: []
     auth: []

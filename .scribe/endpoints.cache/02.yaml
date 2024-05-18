@@ -29,9 +29,9 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":6,"name":"Prof. Marina Gleason PhD"},{"id":7,"name":"Dr. Jordan Kertzmann Jr."}]}'
+        content: '{"data":[{"id":6,"name":"Leola McDermott"},{"id":7,"name":"Joseph Beer"}]}'
         headers: []
-        description: ''
+        description: 'Get all categories'
         custom: []
     responseFields: []
     auth: []

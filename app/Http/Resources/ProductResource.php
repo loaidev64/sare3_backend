@@ -21,6 +21,7 @@ class ProductResource extends JsonResource
             'sale_price' => $this->sale_price,
             'on_sale' => $this->on_sale,
             'discount_percentage' => $this->discount_percentage,
+            'is_favorite_for_current_user' => $this->is_favorite_for_current_user,
         ];
     }
 }

@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var tryItOutBaseUrl = "http://localhost";
+        var tryItOutBaseUrl = "http://127.0.0.1:8000";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -146,6 +146,15 @@
                                                                                 <li class="tocify-item level-2" data-unique="product-GETapi-products--id-">
                                 <a href="#product-GETapi-products--id-">GET api/products/{id}</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="product-POSTapi-products-favorites">
+                                <a href="#product-POSTapi-products-favorites">POST api/products/favorites</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="product-POSTapi-products--product_id--favorite">
+                                <a href="#product-POSTapi-products--product_id--favorite">POST api/products/{product_id}/favorite</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="product-POSTapi-products--product_id--unfavorite">
+                                <a href="#product-POSTapi-products--product_id--unfavorite">POST api/products/{product_id}/unfavorite</a>
+                            </li>
                                                                         </ul>
                             </ul>
             </div>
@@ -166,7 +175,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost</code>
+    <strong>Base URL</strong>: <code>http://127.0.0.1:8000</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -192,14 +201,14 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/banners" \
+    --get "http://127.0.0.1:8000/api/banners" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/banners"
+    "http://127.0.0.1:8000/api/banners"
 );
 
 const headers = {
@@ -216,19 +225,19 @@ fetch(url, {
 
 <span id="example-responses-GETapi-banners">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Get all banners):</p>
         </blockquote>
                 <pre>
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 6,
-            &quot;image&quot;: &quot;http://localhost/storage/vitae&quot;
+            &quot;id&quot;: 7,
+            &quot;image&quot;: &quot;http://127.0.0.1:8000/storage/sit&quot;
         },
         {
-            &quot;id&quot;: 7,
-            &quot;image&quot;: &quot;http://localhost/storage/reiciendis&quot;
+            &quot;id&quot;: 8,
+            &quot;image&quot;: &quot;http://127.0.0.1:8000/storage/provident&quot;
         }
     ]
 }</code>
@@ -322,14 +331,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/brands" \
+    --get "http://127.0.0.1:8000/api/brands" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/brands"
+    "http://127.0.0.1:8000/api/brands"
 );
 
 const headers = {
@@ -346,7 +355,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-brands">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Get all brands):</p>
         </blockquote>
                 <pre>
 
@@ -354,23 +363,23 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 11,
-            &quot;image&quot;: &quot;impedit&quot;,
-            &quot;name&quot;: &quot;Prof. Raul Konopelski V&quot;,
-            &quot;address&quot;: &quot;Numquam non explicabo laudantium vero. Neque cumque mollitia non sint. Cupiditate ipsum omnis ea aut. Vero qui ut necessitatibus non recusandae perferendis.&quot;,
-            &quot;telephone&quot;: &quot;facilis&quot;,
-            &quot;phone&quot;: &quot;(917) 485-9690&quot;,
-            &quot;description&quot;: &quot;Ut amet consequuntur praesentium illum similique et. Dolores temporibus ut ratione dolor maiores. Mollitia temporibus reprehenderit qui rerum ut voluptatum libero.&quot;,
+            &quot;image&quot;: &quot;et&quot;,
+            &quot;name&quot;: &quot;Adah Schaden&quot;,
+            &quot;address&quot;: &quot;Optio omnis illum similique eveniet. Quia magni soluta fugit quaerat sed ut quia beatae. Unde et laborum non sit.&quot;,
+            &quot;telephone&quot;: &quot;ad&quot;,
+            &quot;phone&quot;: &quot;(845) 347-5556&quot;,
+            &quot;description&quot;: &quot;Neque voluptatem recusandae quia hic earum. Non maiores cupiditate voluptatum sit. Natus blanditiis possimus dolorem temporibus consequuntur ut.&quot;,
             &quot;categories&quot;: [],
             &quot;products&quot;: []
         },
         {
             &quot;id&quot;: 12,
-            &quot;image&quot;: &quot;aliquam&quot;,
-            &quot;name&quot;: &quot;Ms. Alisha Morar Sr.&quot;,
-            &quot;address&quot;: &quot;Consequuntur quis neque nobis et et. Repellat ad nihil est reprehenderit. Dolorem sed officiis et dolores eveniet. Dolores reiciendis ratione eos laudantium.&quot;,
-            &quot;telephone&quot;: &quot;quisquam&quot;,
-            &quot;phone&quot;: &quot;(863) 599-3531&quot;,
-            &quot;description&quot;: &quot;Laboriosam commodi assumenda voluptas perferendis magni dolor asperiores ut. Officia animi ducimus atque quia reprehenderit. Nesciunt non vitae laboriosam ab.&quot;,
+            &quot;image&quot;: &quot;aut&quot;,
+            &quot;name&quot;: &quot;Gia Orn&quot;,
+            &quot;address&quot;: &quot;Ex vel deleniti voluptates totam quisquam voluptates adipisci et. Vero dolorem aperiam ea dignissimos maxime rerum sunt. Omnis eum sit quasi quibusdam cumque cupiditate. Eum ad qui et explicabo.&quot;,
+            &quot;telephone&quot;: &quot;ea&quot;,
+            &quot;phone&quot;: &quot;951.338.6008&quot;,
+            &quot;description&quot;: &quot;Quo quia commodi quia ut rem. Qui sed corrupti minima dolorum et autem. Inventore vel ad voluptatem quo est. Beatae inventore qui pariatur nam ducimus ut consequuntur.&quot;,
             &quot;categories&quot;: [],
             &quot;products&quot;: []
         }
@@ -466,14 +475,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/carts" \
+    --get "http://127.0.0.1:8000/api/carts" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/carts"
+    "http://127.0.0.1:8000/api/carts"
 );
 
 const headers = {
@@ -590,20 +599,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/carts" \
+    "http://127.0.0.1:8000/api/carts" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_id\": 18,
-    \"product_id\": 14,
-    \"quantity\": 1323435.543346
+    \"user_id\": 19,
+    \"product_id\": 7,
+    \"quantity\": 80686.3
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/carts"
+    "http://127.0.0.1:8000/api/carts"
 );
 
 const headers = {
@@ -612,9 +621,9 @@ const headers = {
 };
 
 let body = {
-    "user_id": 18,
-    "product_id": 14,
-    "quantity": 1323435.543346
+    "user_id": 19,
+    "product_id": 7,
+    "quantity": 80686.3
 };
 
 fetch(url, {
@@ -703,10 +712,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="user_id"                data-endpoint="POSTapi-carts"
-               value="18"
+               value="19"
                data-component="body">
     <br>
-<p>Example: <code>18</code></p>
+<p>Example: <code>19</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_id</code></b>&nbsp;&nbsp;
@@ -714,10 +723,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_id"                data-endpoint="POSTapi-carts"
-               value="14"
+               value="7"
                data-component="body">
     <br>
-<p>Example: <code>14</code></p>
+<p>Example: <code>7</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -725,10 +734,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="quantity"                data-endpoint="POSTapi-carts"
-               value="1323435.543346"
+               value="80686.3"
                data-component="body">
     <br>
-<p>Example: <code>1323435.543346</code></p>
+<p>Example: <code>80686.3</code></p>
         </div>
         </form>
 
@@ -745,20 +754,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/carts/8" \
+    "http://127.0.0.1:8000/api/carts/14" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_id\": 12,
-    \"product_id\": 2,
-    \"quantity\": 497.0411474
+    \"user_id\": 10,
+    \"product_id\": 7,
+    \"quantity\": 46.6563
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/carts/8"
+    "http://127.0.0.1:8000/api/carts/14"
 );
 
 const headers = {
@@ -767,9 +776,9 @@ const headers = {
 };
 
 let body = {
-    "user_id": 12,
-    "product_id": 2,
-    "quantity": 497.0411474
+    "user_id": 10,
+    "product_id": 7,
+    "quantity": 46.6563
 };
 
 fetch(url, {
@@ -862,10 +871,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-carts--id-"
-               value="8"
+               value="14"
                data-component="url">
     <br>
-<p>The ID of the cart. Example: <code>8</code></p>
+<p>The ID of the cart. Example: <code>14</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -874,10 +883,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="user_id"                data-endpoint="PUTapi-carts--id-"
-               value="12"
+               value="10"
                data-component="body">
     <br>
-<p>Example: <code>12</code></p>
+<p>Example: <code>10</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_id</code></b>&nbsp;&nbsp;
@@ -885,10 +894,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_id"                data-endpoint="PUTapi-carts--id-"
-               value="2"
+               value="7"
                data-component="body">
     <br>
-<p>Example: <code>2</code></p>
+<p>Example: <code>7</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -896,10 +905,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="quantity"                data-endpoint="PUTapi-carts--id-"
-               value="497.0411474"
+               value="46.6563"
                data-component="body">
     <br>
-<p>Example: <code>497.0411474</code></p>
+<p>Example: <code>46.6563</code></p>
         </div>
         </form>
 
@@ -920,14 +929,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/categories" \
+    --get "http://127.0.0.1:8000/api/categories" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/categories"
+    "http://127.0.0.1:8000/api/categories"
 );
 
 const headers = {
@@ -944,7 +953,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-categories">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Get all categories):</p>
         </blockquote>
                 <pre>
 
@@ -952,11 +961,11 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Prof. Marina Gleason PhD&quot;
+            &quot;name&quot;: &quot;Leola McDermott&quot;
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;Dr. Jordan Kertzmann Jr.&quot;
+            &quot;name&quot;: &quot;Joseph Beer&quot;
         }
     ]
 }</code>
@@ -1050,14 +1059,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/user" \
+    --get "http://127.0.0.1:8000/api/user" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/user"
+    "http://127.0.0.1:8000/api/user"
 );
 
 const headers = {
@@ -1178,14 +1187,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/orders" \
+    --get "http://127.0.0.1:8000/api/orders" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/orders"
+    "http://127.0.0.1:8000/api/orders"
 );
 
 const headers = {
@@ -1323,18 +1332,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost/api/orders" \
+    "http://127.0.0.1:8000/api/orders" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_id\": 15
+    \"user_id\": 10
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/orders"
+    "http://127.0.0.1:8000/api/orders"
 );
 
 const headers = {
@@ -1343,7 +1352,7 @@ const headers = {
 };
 
 let body = {
-    "user_id": 15
+    "user_id": 10
 };
 
 fetch(url, {
@@ -1432,10 +1441,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="user_id"                data-endpoint="POSTapi-orders"
-               value="15"
+               value="10"
                data-component="body">
     <br>
-<p>Example: <code>15</code></p>
+<p>Example: <code>10</code></p>
         </div>
         </form>
 
@@ -1446,6 +1455,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h2 id="product-GETapi-products">GET api/products</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1456,14 +1466,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/products?search=test" \
+    --get "http://127.0.0.1:8000/api/products?search=test" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products"
+    "http://127.0.0.1:8000/api/products"
 );
 
 const params = {
@@ -1486,7 +1496,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-products">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Get all products):</p>
         </blockquote>
                 <pre>
 
@@ -1494,23 +1504,25 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Brad Altenwerth&quot;,
-            &quot;description&quot;: &quot;Delectus earum assumenda similique in. Dolorem assumenda harum dolorem hic reprehenderit et. Dicta inventore et possimus eius. Qui reiciendis itaque natus autem labore sed.&quot;,
-            &quot;image&quot;: &quot;quo&quot;,
-            &quot;regular_price&quot;: 7733513860,
-            &quot;sale_price&quot;: 5777305427,
+            &quot;name&quot;: &quot;Jo Grady&quot;,
+            &quot;description&quot;: &quot;Illo deserunt et vero. Maxime non enim fugiat et excepturi sed beatae cumque.&quot;,
+            &quot;image&quot;: &quot;consequatur&quot;,
+            &quot;regular_price&quot;: 7935034966,
+            &quot;sale_price&quot;: 3942001207,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: 19562084.33
+            &quot;discount_percentage&quot;: 39930337.59,
+            &quot;is_favorite_for_current_user&quot;: false
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;Cara Hoeger&quot;,
-            &quot;description&quot;: &quot;In error omnis ex. Et blanditiis neque vero harum eos amet ad. Labore incidunt aliquid ipsam debitis labore.&quot;,
-            &quot;image&quot;: &quot;doloribus&quot;,
-            &quot;regular_price&quot;: 6422737723,
-            &quot;sale_price&quot;: 4030808361,
+            &quot;name&quot;: &quot;Evie Raynor&quot;,
+            &quot;description&quot;: &quot;Ducimus tenetur nostrum quisquam nostrum dolorem et. Eum culpa corrupti sint saepe non sint voluptates incidunt. Fugit necessitatibus dolor corrupti itaque maiores.&quot;,
+            &quot;image&quot;: &quot;fugiat&quot;,
+            &quot;regular_price&quot;: 3009574331,
+            &quot;sale_price&quot;: 9990487368,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: 23919293.62
+            &quot;discount_percentage&quot;: -69809130.37,
+            &quot;is_favorite_for_current_user&quot;: false
         }
     ]
 }</code>
@@ -1533,7 +1545,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-products" data-method="GET"
       data-path="api/products"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1602,6 +1614,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="product-GETapi-products--id-">GET api/products/{id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1612,14 +1625,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/products/1" \
+    --get "http://127.0.0.1:8000/api/products/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/products/1"
+    "http://127.0.0.1:8000/api/products/1"
 );
 
 const headers = {
@@ -1636,20 +1649,21 @@ fetch(url, {
 
 <span id="example-responses-GETapi-products--id-">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Get single product):</p>
         </blockquote>
                 <pre>
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;id&quot;: 6,
-        &quot;name&quot;: &quot;Alford Simonis&quot;,
-        &quot;description&quot;: &quot;Ipsam nesciunt est et consectetur sunt molestias. Minus dolores distinctio necessitatibus culpa maiores dolores.&quot;,
-        &quot;image&quot;: &quot;distinctio&quot;,
-        &quot;regular_price&quot;: 8910740962,
-        &quot;sale_price&quot;: 9856337000,
+        &quot;name&quot;: &quot;Miss Violette Dooley V&quot;,
+        &quot;description&quot;: &quot;Fugiat omnis veniam ut. Nobis nihil consequatur eius quos perspiciatis quaerat. Dolores eos est quia qui. Dicta qui qui pariatur aliquam ut veritatis.&quot;,
+        &quot;image&quot;: &quot;necessitatibus&quot;,
+        &quot;regular_price&quot;: 8524133105,
+        &quot;sale_price&quot;: 3453601190,
         &quot;on_sale&quot;: true,
-        &quot;discount_percentage&quot;: -9455960.38
+        &quot;discount_percentage&quot;: 50705319.15,
+        &quot;is_favorite_for_current_user&quot;: false
     }
 }</code>
  </pre>
@@ -1671,7 +1685,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-products--id-" data-method="GET"
       data-path="api/products/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1730,6 +1744,401 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="GETapi-products--id-"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the product. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="product-POSTapi-products-favorites">POST api/products/favorites</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-products-favorites">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://127.0.0.1:8000/api/products/favorites" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/products/favorites"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-products-favorites">
+            <blockquote>
+            <p>Example response (200, Get all favorite products for the current logged in user):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;Keeley Moore&quot;,
+            &quot;description&quot;: &quot;Enim dicta illo dolor enim sapiente doloremque. Excepturi doloribus minima asperiores ab consequatur. In et aut sit. Ratione porro quia aut repudiandae maxime quia qui.&quot;,
+            &quot;image&quot;: &quot;repudiandae&quot;,
+            &quot;regular_price&quot;: 1597782393,
+            &quot;sale_price&quot;: 6907957120,
+            &quot;on_sale&quot;: true,
+            &quot;discount_percentage&quot;: -53101747.27,
+            &quot;is_favorite_for_current_user&quot;: false
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;name&quot;: &quot;Jude Gerhold&quot;,
+            &quot;description&quot;: &quot;Repellendus earum dolore aliquam omnis architecto placeat et. Amet sit impedit perferendis quo nesciunt modi eaque. Excepturi temporibus occaecati adipisci. Ullam quod sed molestiae.&quot;,
+            &quot;image&quot;: &quot;numquam&quot;,
+            &quot;regular_price&quot;: 7495991092,
+            &quot;sale_price&quot;: 1722667637,
+            &quot;on_sale&quot;: true,
+            &quot;discount_percentage&quot;: 57733234.55,
+            &quot;is_favorite_for_current_user&quot;: false
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-products-favorites" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-products-favorites"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-products-favorites"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-products-favorites" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-products-favorites">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-products-favorites" data-method="POST"
+      data-path="api/products/favorites"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-products-favorites', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-products-favorites"
+                    onclick="tryItOut('POSTapi-products-favorites');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-products-favorites"
+                    onclick="cancelTryOut('POSTapi-products-favorites');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-products-favorites"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/products/favorites</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-products-favorites"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-products-favorites"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="product-POSTapi-products--product_id--favorite">POST api/products/{product_id}/favorite</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-products--product_id--favorite">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://127.0.0.1:8000/api/products/1/favorite" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/products/1/favorite"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-products--product_id--favorite">
+            <blockquote>
+            <p>Example response (204, Mark a product as favorite product for logged in user):</p>
+        </blockquote>
+                <pre>
+<code>Empty response</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-products--product_id--favorite" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-products--product_id--favorite"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-products--product_id--favorite"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-products--product_id--favorite" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-products--product_id--favorite">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-products--product_id--favorite" data-method="POST"
+      data-path="api/products/{product_id}/favorite"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-products--product_id--favorite', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-products--product_id--favorite"
+                    onclick="tryItOut('POSTapi-products--product_id--favorite');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-products--product_id--favorite"
+                    onclick="cancelTryOut('POSTapi-products--product_id--favorite');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-products--product_id--favorite"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/products/{product_id}/favorite</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-products--product_id--favorite"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-products--product_id--favorite"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>product_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="product_id"                data-endpoint="POSTapi-products--product_id--favorite"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the product. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="product-POSTapi-products--product_id--unfavorite">POST api/products/{product_id}/unfavorite</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-products--product_id--unfavorite">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://127.0.0.1:8000/api/products/1/unfavorite" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/products/1/unfavorite"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-products--product_id--unfavorite">
+            <blockquote>
+            <p>Example response (204, Remove a product from favorite products for logged in user):</p>
+        </blockquote>
+                <pre>
+<code>Empty response</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-products--product_id--unfavorite" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-products--product_id--unfavorite"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-products--product_id--unfavorite"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-products--product_id--unfavorite" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-products--product_id--unfavorite">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-products--product_id--unfavorite" data-method="POST"
+      data-path="api/products/{product_id}/unfavorite"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-products--product_id--unfavorite', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-products--product_id--unfavorite"
+                    onclick="tryItOut('POSTapi-products--product_id--unfavorite');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-products--product_id--unfavorite"
+                    onclick="cancelTryOut('POSTapi-products--product_id--unfavorite');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-products--product_id--unfavorite"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/products/{product_id}/unfavorite</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-products--product_id--unfavorite"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-products--product_id--unfavorite"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>product_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="product_id"                data-endpoint="POSTapi-products--product_id--unfavorite"
                value="1"
                data-component="url">
     <br>

@@ -13,7 +13,8 @@ class BrandController extends Controller
 {
     #[ResponseFromApiResource(
         name: BrandCollection::class,
-        model: Brand::class
+        model: Brand::class,
+        description: 'Get all brands'
     )]
     public function index(Request $request): BrandCollection
     {

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Product extends Model
 {
@@ -51,10 +52,22 @@ class Product extends Model
         );
     }
 
+    protected function isFavoriteForCurrentUser(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->favorites()->where('user_id', auth()->id())->count() == 1,
+        );
+    }
+
     protected function discountPercentage(): Attribute
     {
         return Attribute::make(
             get: fn () => ($this->regular_price  - $this->sale_price) / 100,
         );
+    }
+
+    public function favorites(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'favorites', 'product_id', 'user_id');
     }
 }

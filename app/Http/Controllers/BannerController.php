@@ -13,7 +13,8 @@ class BannerController extends Controller
 {
     #[ResponseFromApiResource(
         name: BannerCollection::class,
-        model: Banner::class
+        model: Banner::class,
+        description: 'Get all banners'
     )]
     public function index(Request $request): BannerCollection
     {
