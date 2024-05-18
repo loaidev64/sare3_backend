@@ -9,6 +9,10 @@ cd sare3_backend
 composer i
 
 cp .env.example .env
+
+php artisan migrate --seed
+
+php artisan storage:link
 ```
 
 - everything is good to go.
