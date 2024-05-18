@@ -27,7 +27,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":6,"image":"http:\/\/localhost\/storage\/voluptate"},{"id":7,"image":"http:\/\/localhost\/storage\/qui"}]}'
+        content: '{"data":[{"id":6,"image":"http:\/\/localhost\/storage\/vitae"},{"id":7,"image":"http:\/\/localhost\/storage\/reiciendis"}]}'
         headers: []
         description: ''
         custom: []

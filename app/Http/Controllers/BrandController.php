@@ -17,7 +17,9 @@ class BrandController extends Controller
     )]
     public function index(Request $request): BrandCollection
     {
-        $brands = Brand::all();
+        $brands = Brand::query()
+            ->with(['categories', 'products' => fn ($query) => $query->limit(6)])
+            ->get();
 
         return new BrandCollection($brands);
     }

@@ -37,7 +37,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":6,"name":"Lyla Robel","description":"Doloremque officia ut et sunt. Voluptatem dolore velit dolorum iusto laborum blanditiis ut. Iure ad est omnis eveniet id. Rerum ducimus commodi sunt quaerat temporibus ea.","image":"dolores","regular_price":3479361321,"sale_price":3204078489},{"id":7,"name":"Prof. Rowan Hoppe Jr.","description":"Rerum dicta illum aut minima. Porro unde laboriosam animi voluptatem ratione consequatur sint. Aspernatur cum sit nihil officia et. Ducimus ad maxime placeat molestiae quibusdam ipsum recusandae.","image":"animi","regular_price":3172169492,"sale_price":3756770442}]}'
+        content: '{"data":[{"id":6,"name":"Brad Altenwerth","description":"Delectus earum assumenda similique in. Dolorem assumenda harum dolorem hic reprehenderit et. Dicta inventore et possimus eius. Qui reiciendis itaque natus autem labore sed.","image":"quo","regular_price":7733513860,"sale_price":5777305427,"on_sale":true,"discount_percentage":19562084.33},{"id":7,"name":"Cara Hoeger","description":"In error omnis ex. Et blanditiis neque vero harum eos amet ad. Labore incidunt aliquid ipsam debitis labore.","image":"doloribus","regular_price":6422737723,"sale_price":4030808361,"on_sale":true,"discount_percentage":23919293.62}]}'
         headers: []
         description: ''
         custom: []
@@ -83,7 +83,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":6,"name":"Murphy Goodwin","description":"Sint inventore ullam ipsa. Quisquam animi quia sit qui. Vitae facilis velit et quas cupiditate. Illum rerum commodi odit non rem est.","image":"consequatur","regular_price":1957840976,"sale_price":3291655524}}'
+        content: '{"data":{"id":6,"name":"Alford Simonis","description":"Ipsam nesciunt est et consectetur sunt molestias. Minus dolores distinctio necessitatibus culpa maiores dolores.","image":"distinctio","regular_price":8910740962,"sale_price":9856337000,"on_sale":true,"discount_percentage":-9455960.38}}'
         headers: []
         description: ''
         custom: []

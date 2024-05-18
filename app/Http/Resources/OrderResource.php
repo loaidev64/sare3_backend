@@ -15,7 +15,7 @@ class OrderResource extends JsonResource
         return [
             'id' => $this->id,
             'user_id' => $this->user_id,
-            'orderItems' => OrderItemCollection::make($this->whenLoaded('orderItems')),
+            // 'orderItems' => OrderItemCollection::make($this->whenLoaded('orderItems')),
         ];
     }
 }

@@ -29,7 +29,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":6,"name":"Prof. Meredith Daniel"},{"id":7,"name":"Miss Jacynthe Waelchi"}]}'
+        content: '{"data":[{"id":6,"name":"Prof. Marina Gleason PhD"},{"id":7,"name":"Dr. Jordan Kertzmann Jr."}]}'
         headers: []
         description: ''
         custom: []
