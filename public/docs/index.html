@@ -100,6 +100,9 @@
                                                                                 <li class="tocify-item level-2" data-unique="cart-PUTapi-carts--id-">
                                 <a href="#cart-PUTapi-carts--id-">PUT api/carts/{id}</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="cart-DELETEapi-carts--id-">
+                                <a href="#cart-DELETEapi-carts--id-">DELETE api/carts/{id}</a>
+                            </li>
                                                                         </ul>
                             </ul>
                     <ul id="tocify-header-category" class="tocify-header">
@@ -166,7 +169,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: May 18, 2024</li>
+        <li>Last updated: May 20, 2024</li>
     </ul>
 </div>
 
@@ -233,11 +236,11 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 7,
-            &quot;image&quot;: &quot;http://127.0.0.1:8000/storage/sit&quot;
+            &quot;image&quot;: &quot;http://127.0.0.1:8000/storage/sapiente&quot;
         },
         {
             &quot;id&quot;: 8,
-            &quot;image&quot;: &quot;http://127.0.0.1:8000/storage/provident&quot;
+            &quot;image&quot;: &quot;http://127.0.0.1:8000/storage/omnis&quot;
         }
     ]
 }</code>
@@ -363,23 +366,23 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 11,
-            &quot;image&quot;: &quot;et&quot;,
-            &quot;name&quot;: &quot;Adah Schaden&quot;,
-            &quot;address&quot;: &quot;Optio omnis illum similique eveniet. Quia magni soluta fugit quaerat sed ut quia beatae. Unde et laborum non sit.&quot;,
-            &quot;telephone&quot;: &quot;ad&quot;,
-            &quot;phone&quot;: &quot;(845) 347-5556&quot;,
-            &quot;description&quot;: &quot;Neque voluptatem recusandae quia hic earum. Non maiores cupiditate voluptatum sit. Natus blanditiis possimus dolorem temporibus consequuntur ut.&quot;,
+            &quot;image&quot;: &quot;dolor&quot;,
+            &quot;name&quot;: &quot;Tyler Blick&quot;,
+            &quot;address&quot;: &quot;Culpa quo qui ad dolor dolorem molestias omnis. Cupiditate voluptatem illum similique eveniet optio veniam et. Qui qui consequatur in ut. Rerum quam non beatae.&quot;,
+            &quot;telephone&quot;: &quot;omnis&quot;,
+            &quot;phone&quot;: &quot;+1 (725) 691-0322&quot;,
+            &quot;description&quot;: &quot;Quidem recusandae quo eveniet quae. Rerum incidunt optio omnis eos velit aliquam. Nisi suscipit ut a minus est occaecati libero. Nisi omnis eius et ipsam maiores qui ex.&quot;,
             &quot;categories&quot;: [],
             &quot;products&quot;: []
         },
         {
             &quot;id&quot;: 12,
-            &quot;image&quot;: &quot;aut&quot;,
-            &quot;name&quot;: &quot;Gia Orn&quot;,
-            &quot;address&quot;: &quot;Ex vel deleniti voluptates totam quisquam voluptates adipisci et. Vero dolorem aperiam ea dignissimos maxime rerum sunt. Omnis eum sit quasi quibusdam cumque cupiditate. Eum ad qui et explicabo.&quot;,
-            &quot;telephone&quot;: &quot;ea&quot;,
-            &quot;phone&quot;: &quot;951.338.6008&quot;,
-            &quot;description&quot;: &quot;Quo quia commodi quia ut rem. Qui sed corrupti minima dolorum et autem. Inventore vel ad voluptatem quo est. Beatae inventore qui pariatur nam ducimus ut consequuntur.&quot;,
+            &quot;image&quot;: &quot;officiis&quot;,
+            &quot;name&quot;: &quot;Mason Christiansen IV&quot;,
+            &quot;address&quot;: &quot;Quo molestiae omnis vero. Cum incidunt voluptates reprehenderit doloribus eligendi odit. Aut omnis impedit aliquid excepturi voluptas totam accusantium.&quot;,
+            &quot;telephone&quot;: &quot;ut&quot;,
+            &quot;phone&quot;: &quot;1-425-598-6146&quot;,
+            &quot;description&quot;: &quot;Ut dignissimos qui dolorem enim voluptas sit. Fuga illum qui asperiores vero. Quos facere placeat sint deserunt asperiores sint.&quot;,
             &quot;categories&quot;: [],
             &quot;products&quot;: []
         }
@@ -465,6 +468,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h2 id="cart-GETapi-carts">GET api/carts</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -499,19 +503,43 @@ fetch(url, {
 
 <span id="example-responses-GETapi-carts">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (200, Get all cart items of the logged in user):</p>
         </blockquote>
-                <details class="annotation">
-            <summary style="cursor: pointer;">
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre></details>         <pre>
+                <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;data&quot;: []
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;product&quot;: {
+                &quot;id&quot;: 6,
+                &quot;name&quot;: &quot;Joaquin Herman&quot;,
+                &quot;description&quot;: &quot;Voluptatum amet nihil id quas rerum dolor. Praesentium quos et sit fugit. Voluptas modi deleniti et libero sit et quo.&quot;,
+                &quot;image&quot;: &quot;laborum&quot;,
+                &quot;regular_price&quot;: 2451658860,
+                &quot;sale_price&quot;: 3011574867,
+                &quot;on_sale&quot;: true,
+                &quot;discount_percentage&quot;: -5599160.07,
+                &quot;is_favorite_for_current_user&quot;: false
+            },
+            &quot;quantity&quot;: 2692673296
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;product&quot;: {
+                &quot;id&quot;: 7,
+                &quot;name&quot;: &quot;Arvilla Green&quot;,
+                &quot;description&quot;: &quot;Quia aut adipisci maiores nemo molestiae velit assumenda. Ea voluptatum autem aliquam illum minus dignissimos. Vel non in blanditiis quia soluta.&quot;,
+                &quot;image&quot;: &quot;consequuntur&quot;,
+                &quot;regular_price&quot;: 5168149957,
+                &quot;sale_price&quot;: 4425293591,
+                &quot;on_sale&quot;: true,
+                &quot;discount_percentage&quot;: 7428563.66,
+                &quot;is_favorite_for_current_user&quot;: false
+            },
+            &quot;quantity&quot;: 2707819283
+        }
+    ]
 }</code>
  </pre>
     </span>
@@ -532,7 +560,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-carts" data-method="GET"
       data-path="api/carts"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -589,6 +617,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="cart-POSTapi-carts">POST api/carts</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -603,9 +632,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_id\": 19,
-    \"product_id\": 7,
-    \"quantity\": 80686.3
+    \"product_id\": 4,
+    \"quantity\": 7875223.93181969
 }"
 </code></pre></div>
 
@@ -621,9 +649,8 @@ const headers = {
 };
 
 let body = {
-    "user_id": 19,
-    "product_id": 7,
-    "quantity": 80686.3
+    "product_id": 4,
+    "quantity": 7875223.93181969
 };
 
 fetch(url, {
@@ -635,7 +662,30 @@ fetch(url, {
 </span>
 
 <span id="example-responses-POSTapi-carts">
-</span>
+            <blockquote>
+            <p>Example response (200, create new cart item for the logged in user):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;product&quot;: {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;Darlene Schinner Sr.&quot;,
+            &quot;description&quot;: &quot;Vel id aut tempora veritatis. Et quibusdam animi omnis. Sunt aut maiores excepturi hic dolorem assumenda beatae.&quot;,
+            &quot;image&quot;: &quot;tempore&quot;,
+            &quot;regular_price&quot;: 9200382371,
+            &quot;sale_price&quot;: 6370260089,
+            &quot;on_sale&quot;: true,
+            &quot;discount_percentage&quot;: 28301222.82,
+            &quot;is_favorite_for_current_user&quot;: false
+        },
+        &quot;quantity&quot;: 6320242931
+    }
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-POSTapi-carts" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-POSTapi-carts"></span>:
@@ -653,7 +703,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-carts" data-method="POST"
       data-path="api/carts"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -707,26 +757,15 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                                 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
- &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="user_id"                data-endpoint="POSTapi-carts"
-               value="19"
-               data-component="body">
-    <br>
-<p>Example: <code>19</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_id"                data-endpoint="POSTapi-carts"
-               value="7"
+               value="4"
                data-component="body">
     <br>
-<p>Example: <code>7</code></p>
+<p>Example: <code>4</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -734,16 +773,17 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="quantity"                data-endpoint="POSTapi-carts"
-               value="80686.3"
+               value="7875223.9318197"
                data-component="body">
     <br>
-<p>Example: <code>80686.3</code></p>
+<p>Example: <code>7875223.9318197</code></p>
         </div>
         </form>
 
                     <h2 id="cart-PUTapi-carts--id-">PUT api/carts/{id}</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -754,20 +794,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://127.0.0.1:8000/api/carts/14" \
+    "http://127.0.0.1:8000/api/carts/7" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_id\": 10,
-    \"product_id\": 7,
-    \"quantity\": 46.6563
+    \"product_id\": 13,
+    \"quantity\": 49.275
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/carts/14"
+    "http://127.0.0.1:8000/api/carts/7"
 );
 
 const headers = {
@@ -776,9 +815,8 @@ const headers = {
 };
 
 let body = {
-    "user_id": 10,
-    "product_id": 7,
-    "quantity": 46.6563
+    "product_id": 13,
+    "quantity": 49.275
 };
 
 fetch(url, {
@@ -790,7 +828,30 @@ fetch(url, {
 </span>
 
 <span id="example-responses-PUTapi-carts--id-">
-</span>
+            <blockquote>
+            <p>Example response (200, update a cart item for the logged in user):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: {
+        &quot;id&quot;: 1,
+        &quot;product&quot;: {
+            &quot;id&quot;: 6,
+            &quot;name&quot;: &quot;Prof. Mia Renner DVM&quot;,
+            &quot;description&quot;: &quot;Et architecto asperiores dolor harum. Facilis et et consequatur consequuntur veritatis. Vitae excepturi perferendis delectus voluptatem at voluptatem veniam. Ea deserunt quo ipsam omnis non.&quot;,
+            &quot;image&quot;: &quot;aperiam&quot;,
+            &quot;regular_price&quot;: 8967565706,
+            &quot;sale_price&quot;: 9895451757,
+            &quot;on_sale&quot;: true,
+            &quot;discount_percentage&quot;: -9278860.51,
+            &quot;is_favorite_for_current_user&quot;: false
+        },
+        &quot;quantity&quot;: 3028654588
+    }
+}</code>
+ </pre>
+    </span>
 <span id="execution-results-PUTapi-carts--id-" hidden>
     <blockquote>Received response<span
                 id="execution-response-status-PUTapi-carts--id-"></span>:
@@ -808,7 +869,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-carts--id-" data-method="PUT"
       data-path="api/carts/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -871,33 +932,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-carts--id-"
-               value="14"
+               value="7"
                data-component="url">
     <br>
-<p>The ID of the cart. Example: <code>14</code></p>
+<p>The ID of the cart. Example: <code>7</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>user_id</code></b>&nbsp;&nbsp;
-<small>integer</small>&nbsp;
- &nbsp;
-                <input type="number" style="display: none"
-               step="any"               name="user_id"                data-endpoint="PUTapi-carts--id-"
-               value="10"
-               data-component="body">
-    <br>
-<p>Example: <code>10</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>product_id</code></b>&nbsp;&nbsp;
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_id"                data-endpoint="PUTapi-carts--id-"
-               value="7"
+               value="13"
                data-component="body">
     <br>
-<p>Example: <code>7</code></p>
+<p>Example: <code>13</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -905,12 +955,139 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="quantity"                data-endpoint="PUTapi-carts--id-"
-               value="46.6563"
+               value="49.275"
                data-component="body">
     <br>
-<p>Example: <code>46.6563</code></p>
+<p>Example: <code>49.275</code></p>
         </div>
         </form>
+
+                    <h2 id="cart-DELETEapi-carts--id-">DELETE api/carts/{id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-carts--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://127.0.0.1:8000/api/carts/1" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/carts/1"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-carts--id-">
+            <blockquote>
+            <p>Example response (204):</p>
+        </blockquote>
+                <pre>
+<code>Empty response</code>
+ </pre>
+    </span>
+<span id="execution-results-DELETEapi-carts--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-carts--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-carts--id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-carts--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-carts--id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-DELETEapi-carts--id-" data-method="DELETE"
+      data-path="api/carts/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-carts--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-carts--id-"
+                    onclick="tryItOut('DELETEapi-carts--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-carts--id-"
+                    onclick="cancelTryOut('DELETEapi-carts--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-carts--id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/carts/{id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="DELETEapi-carts--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="DELETEapi-carts--id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="id"                data-endpoint="DELETEapi-carts--id-"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the cart. Example: <code>1</code></p>
+            </div>
+                    </form>
 
                 <h1 id="category">Category</h1>
 
@@ -961,11 +1138,11 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Leola McDermott&quot;
+            &quot;name&quot;: &quot;Antonette Bernier&quot;
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;Joseph Beer&quot;
+            &quot;name&quot;: &quot;Beth Walker&quot;
         }
     ]
 }</code>
@@ -1336,7 +1513,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"user_id\": 10
+    \"user_id\": 8
 }"
 </code></pre></div>
 
@@ -1352,7 +1529,7 @@ const headers = {
 };
 
 let body = {
-    "user_id": 10
+    "user_id": 8
 };
 
 fetch(url, {
@@ -1441,10 +1618,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="user_id"                data-endpoint="POSTapi-orders"
-               value="10"
+               value="8"
                data-component="body">
     <br>
-<p>Example: <code>10</code></p>
+<p>Example: <code>8</code></p>
         </div>
         </form>
 
@@ -1504,24 +1681,24 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Jo Grady&quot;,
-            &quot;description&quot;: &quot;Illo deserunt et vero. Maxime non enim fugiat et excepturi sed beatae cumque.&quot;,
-            &quot;image&quot;: &quot;consequatur&quot;,
-            &quot;regular_price&quot;: 7935034966,
-            &quot;sale_price&quot;: 3942001207,
+            &quot;name&quot;: &quot;Hilda Connelly&quot;,
+            &quot;description&quot;: &quot;Quo blanditiis neque tempora non. Ipsa aut sunt perspiciatis ratione perferendis rerum esse. Est dicta veritatis magnam sunt id quia eum voluptas.&quot;,
+            &quot;image&quot;: &quot;repudiandae&quot;,
+            &quot;regular_price&quot;: 7405067410,
+            &quot;sale_price&quot;: 3245844092,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: 39930337.59,
+            &quot;discount_percentage&quot;: 41592233.18,
             &quot;is_favorite_for_current_user&quot;: false
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;Evie Raynor&quot;,
-            &quot;description&quot;: &quot;Ducimus tenetur nostrum quisquam nostrum dolorem et. Eum culpa corrupti sint saepe non sint voluptates incidunt. Fugit necessitatibus dolor corrupti itaque maiores.&quot;,
-            &quot;image&quot;: &quot;fugiat&quot;,
-            &quot;regular_price&quot;: 3009574331,
-            &quot;sale_price&quot;: 9990487368,
+            &quot;name&quot;: &quot;Morris Jones DVM&quot;,
+            &quot;description&quot;: &quot;Debitis reprehenderit magni praesentium. Dolores in corporis deserunt commodi enim quia. Sequi dignissimos earum itaque.&quot;,
+            &quot;image&quot;: &quot;natus&quot;,
+            &quot;regular_price&quot;: 7288047711,
+            &quot;sale_price&quot;: 3164999915,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: -69809130.37,
+            &quot;discount_percentage&quot;: 41230477.96,
             &quot;is_favorite_for_current_user&quot;: false
         }
     ]
@@ -1656,13 +1833,13 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;id&quot;: 6,
-        &quot;name&quot;: &quot;Miss Violette Dooley V&quot;,
-        &quot;description&quot;: &quot;Fugiat omnis veniam ut. Nobis nihil consequatur eius quos perspiciatis quaerat. Dolores eos est quia qui. Dicta qui qui pariatur aliquam ut veritatis.&quot;,
-        &quot;image&quot;: &quot;necessitatibus&quot;,
-        &quot;regular_price&quot;: 8524133105,
-        &quot;sale_price&quot;: 3453601190,
+        &quot;name&quot;: &quot;Zetta Hammes DVM&quot;,
+        &quot;description&quot;: &quot;Voluptate sunt sit voluptate ea temporibus quis ut. Ex reprehenderit recusandae incidunt qui temporibus. Dolores alias aut repellendus ullam iure et. Et ut quaerat eveniet sit optio eaque.&quot;,
+        &quot;image&quot;: &quot;laboriosam&quot;,
+        &quot;regular_price&quot;: 4838856367,
+        &quot;sale_price&quot;: 3363140134,
         &quot;on_sale&quot;: true,
-        &quot;discount_percentage&quot;: 50705319.15,
+        &quot;discount_percentage&quot;: 14757162.33,
         &quot;is_favorite_for_current_user&quot;: false
     }
 }</code>
@@ -1797,24 +1974,24 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Keeley Moore&quot;,
-            &quot;description&quot;: &quot;Enim dicta illo dolor enim sapiente doloremque. Excepturi doloribus minima asperiores ab consequatur. In et aut sit. Ratione porro quia aut repudiandae maxime quia qui.&quot;,
-            &quot;image&quot;: &quot;repudiandae&quot;,
-            &quot;regular_price&quot;: 1597782393,
-            &quot;sale_price&quot;: 6907957120,
+            &quot;name&quot;: &quot;Caroline D&#039;Amore PhD&quot;,
+            &quot;description&quot;: &quot;Qui rem consequuntur officia facilis quo. Corrupti ipsam aut doloribus ea. Vero autem praesentium ullam repellat exercitationem rerum quibusdam. Suscipit rem et nam.&quot;,
+            &quot;image&quot;: &quot;nostrum&quot;,
+            &quot;regular_price&quot;: 219269605,
+            &quot;sale_price&quot;: 8695606104,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: -53101747.27,
+            &quot;discount_percentage&quot;: -84763364.99,
             &quot;is_favorite_for_current_user&quot;: false
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;Jude Gerhold&quot;,
-            &quot;description&quot;: &quot;Repellendus earum dolore aliquam omnis architecto placeat et. Amet sit impedit perferendis quo nesciunt modi eaque. Excepturi temporibus occaecati adipisci. Ullam quod sed molestiae.&quot;,
-            &quot;image&quot;: &quot;numquam&quot;,
-            &quot;regular_price&quot;: 7495991092,
-            &quot;sale_price&quot;: 1722667637,
+            &quot;name&quot;: &quot;Stan Jacobi&quot;,
+            &quot;description&quot;: &quot;Vero omnis alias aperiam rerum veritatis dolore dignissimos ad. Quibusdam aut quas consequatur magni ipsum. Magni autem quo error sequi.&quot;,
+            &quot;image&quot;: &quot;ea&quot;,
+            &quot;regular_price&quot;: 6501894479,
+            &quot;sale_price&quot;: 4932397191,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: 57733234.55,
+            &quot;discount_percentage&quot;: 15694972.88,
             &quot;is_favorite_for_current_user&quot;: false
         }
     ]

@@ -14,11 +14,11 @@ Route::apiResource('categories', App\Http\Controllers\CategoryController::class)
 
 Route::apiResource('brands', App\Http\Controllers\BrandController::class)->only('index');
 
-Route::apiResource('carts', App\Http\Controllers\CartController::class)->except('show', 'destroy');
-
 Route::apiResource('orders', App\Http\Controllers\OrderController::class)->except('update', 'show', 'destroy');
 
 Route::middleware('auth:sanctum')->group(function () {
+
+    Route::apiResource('carts', App\Http\Controllers\CartController::class)->except('show');
 
     Route::apiResource('products', App\Http\Controllers\ProductController::class)->except('store', 'update', 'destroy');
 
