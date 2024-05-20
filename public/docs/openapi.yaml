@@ -7,6 +7,119 @@ servers:
   -
     url: 'http://127.0.0.1:8000'
 paths:
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: 'if email and password is correct'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  token: 1|dsakpodkaspokdopask
+                properties:
+                  token:
+                    type: string
+                    example: 1|dsakpodkaspokdopask
+        400:
+          description: 'if email and password is incorrect'
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Email or password is wrong'
+                properties:
+                  message:
+                    type: string
+                    example: 'Email or password is wrong'
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: yshields@example.com
+                password:
+                  type: string
+                  description: ''
+                  example: 'yuItz`#\<Rey['
+              required:
+                - email
+                - password
+      security: []
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  token: 1|dsakpodkaspokdopask
+                properties:
+                  token:
+                    type: string
+                    example: 1|dsakpodkaspokdopask
+      tags:
+        - Authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: dolorum
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: jennyfer14@example.com
+                password:
+                  type: string
+                  description: ''
+                  example: 'H}QM5(2`m(]c3tmj'
+                phone:
+                  type: string
+                  description: ''
+                  example: fugit
+              required:
+                - name
+                - email
+                - password
+                - phone
+      security: []
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters: []
+      responses:
+        204:
+          description: ''
+      tags:
+        - Authentication
   /api/banners:
     get:
       summary: ''
@@ -23,30 +136,30 @@ paths:
                 example:
                   data:
                     -
-                      id: 7
-                      image: 'http://127.0.0.1:8000/storage/nobis'
+                      id: 6
+                      image: 'http://127.0.0.1:8000/storage/sit'
                     -
-                      id: 8
-                      image: 'http://127.0.0.1:8000/storage/qui'
+                      id: 7
+                      image: 'http://127.0.0.1:8000/storage/officia'
                 properties:
                   data:
                     type: array
                     example:
                       -
-                        id: 7
-                        image: 'http://127.0.0.1:8000/storage/nobis'
+                        id: 6
+                        image: 'http://127.0.0.1:8000/storage/sit'
                       -
-                        id: 8
-                        image: 'http://127.0.0.1:8000/storage/qui'
+                        id: 7
+                        image: 'http://127.0.0.1:8000/storage/officia'
                     items:
                       type: object
                       properties:
                         id:
                           type: integer
-                          example: 7
+                          example: 6
                         image:
                           type: string
-                          example: 'http://127.0.0.1:8000/storage/nobis'
+                          example: 'http://127.0.0.1:8000/storage/sit'
       tags:
         - Banner
       security: []
@@ -67,22 +180,22 @@ paths:
                   data:
                     -
                       id: 11
-                      image: consequatur
-                      name: 'Jaleel Mayer I'
-                      address: 'Quod sit harum tenetur sunt temporibus. Possimus nobis ratione explicabo ipsam voluptatibus dignissimos. Soluta quasi earum qui consequatur possimus aut.'
-                      telephone: est
-                      phone: 1-570-697-1305
-                      description: 'Et et autem est numquam quo dolor facilis officia. Corporis numquam voluptatem voluptatem incidunt cupiditate. Debitis similique magnam et eius quisquam est aut.'
+                      image: dolorem
+                      name: 'Caroline Glover'
+                      address: 'Tempore voluptatem sequi voluptates. Veniam et eum officiis nulla. Excepturi inventore ut molestias impedit tenetur nulla. Repellendus id sint amet officia.'
+                      telephone: earum
+                      phone: 501.385.2898
+                      description: 'Doloremque qui hic cumque quasi molestias dicta rem. Beatae dolore quasi sit aliquid.'
                       categories: []
                       products: []
                     -
                       id: 12
-                      image: consequatur
-                      name: 'Jaqueline Klocko III'
-                      address: 'Esse debitis iure quisquam. Ratione fuga ipsa iusto et. Tenetur et officia magnam vitae eos vero. Necessitatibus ratione ullam modi est. Enim est harum temporibus sed.'
-                      telephone: est
-                      phone: '(602) 935-7595'
-                      description: 'Quos voluptate rerum velit saepe velit. Et repudiandae sequi et temporibus maxime sed. Voluptatum libero necessitatibus ducimus et velit accusamus.'
+                      image: vel
+                      name: 'Tatyana Boyer'
+                      address: 'Molestiae deleniti impedit esse accusantium. Alias nesciunt blanditiis dolor quasi. Vel totam cumque aut nostrum modi est totam.'
+                      telephone: aperiam
+                      phone: 386-229-8613
+                      description: 'Itaque nisi dolorem aut exercitationem dolore sit. Cum laboriosam vitae ex odio deserunt. Enim ea accusantium atque. Beatae placeat est velit.'
                       categories: []
                       products: []
                 properties:
@@ -91,22 +204,22 @@ paths:
                     example:
                       -
                         id: 11
-                        image: consequatur
-                        name: 'Jaleel Mayer I'
-                        address: 'Quod sit harum tenetur sunt temporibus. Possimus nobis ratione explicabo ipsam voluptatibus dignissimos. Soluta quasi earum qui consequatur possimus aut.'
-                        telephone: est
-                        phone: 1-570-697-1305
-                        description: 'Et et autem est numquam quo dolor facilis officia. Corporis numquam voluptatem voluptatem incidunt cupiditate. Debitis similique magnam et eius quisquam est aut.'
+                        image: dolorem
+                        name: 'Caroline Glover'
+                        address: 'Tempore voluptatem sequi voluptates. Veniam et eum officiis nulla. Excepturi inventore ut molestias impedit tenetur nulla. Repellendus id sint amet officia.'
+                        telephone: earum
+                        phone: 501.385.2898
+                        description: 'Doloremque qui hic cumque quasi molestias dicta rem. Beatae dolore quasi sit aliquid.'
                         categories: []
                         products: []
                       -
                         id: 12
-                        image: consequatur
-                        name: 'Jaqueline Klocko III'
-                        address: 'Esse debitis iure quisquam. Ratione fuga ipsa iusto et. Tenetur et officia magnam vitae eos vero. Necessitatibus ratione ullam modi est. Enim est harum temporibus sed.'
-                        telephone: est
-                        phone: '(602) 935-7595'
-                        description: 'Quos voluptate rerum velit saepe velit. Et repudiandae sequi et temporibus maxime sed. Voluptatum libero necessitatibus ducimus et velit accusamus.'
+                        image: vel
+                        name: 'Tatyana Boyer'
+                        address: 'Molestiae deleniti impedit esse accusantium. Alias nesciunt blanditiis dolor quasi. Vel totam cumque aut nostrum modi est totam.'
+                        telephone: aperiam
+                        phone: 386-229-8613
+                        description: 'Itaque nisi dolorem aut exercitationem dolore sit. Cum laboriosam vitae ex odio deserunt. Enim ea accusantium atque. Beatae placeat est velit.'
                         categories: []
                         products: []
                     items:
@@ -117,22 +230,22 @@ paths:
                           example: 11
                         image:
                           type: string
-                          example: consequatur
+                          example: dolorem
                         name:
                           type: string
-                          example: 'Jaleel Mayer I'
+                          example: 'Caroline Glover'
                         address:
                           type: string
-                          example: 'Quod sit harum tenetur sunt temporibus. Possimus nobis ratione explicabo ipsam voluptatibus dignissimos. Soluta quasi earum qui consequatur possimus aut.'
+                          example: 'Tempore voluptatem sequi voluptates. Veniam et eum officiis nulla. Excepturi inventore ut molestias impedit tenetur nulla. Repellendus id sint amet officia.'
                         telephone:
                           type: string
-                          example: est
+                          example: earum
                         phone:
                           type: string
-                          example: 1-570-697-1305
+                          example: 501.385.2898
                         description:
                           type: string
-                          example: 'Et et autem est numquam quo dolor facilis officia. Corporis numquam voluptatem voluptatem incidunt cupiditate. Debitis similique magnam et eius quisquam est aut.'
+                          example: 'Doloremque qui hic cumque quasi molestias dicta rem. Beatae dolore quasi sit aliquid.'
                         categories:
                           type: array
                           example: []
@@ -161,28 +274,28 @@ paths:
                       id: 1
                       product:
                         id: 6
-                        name: 'Mazie Hirthe'
-                        description: 'Harum id magni consectetur magni aut animi. Ut et totam voluptatum dolorum sit ut recusandae. Reprehenderit id eos praesentium veritatis adipisci qui. Laudantium et fuga distinctio sit.'
-                        image: quibusdam
-                        regular_price: 9992039654
-                        sale_price: 3386126609
+                        name: 'Stephania Funk'
+                        description: 'At voluptatem corrupti doloribus. Quos voluptatem qui autem doloribus velit velit nam consequatur. Veniam molestiae eligendi qui ut ut corporis. Id sed voluptatem ab tempora illo aut.'
+                        image: reiciendis
+                        regular_price: 3844961209
+                        sale_price: 3094587271
                         on_sale: true
-                        discount_percentage: 66059130.45
+                        discount_percentage: 7503739.38
                         is_favorite_for_current_user: false
-                      quantity: 5838298735
+                      quantity: 8433173102
                     -
                       id: 2
                       product:
                         id: 7
-                        name: 'Mrs. Krystel Lemke'
-                        description: 'Nulla dolor nam nostrum asperiores nihil optio totam. Eum ea et sint asperiores sint. Dolor velit necessitatibus voluptatibus quis ea necessitatibus. Dolores est nihil dolorum odio.'
-                        image: voluptatem
-                        regular_price: 9821761217
-                        sale_price: 2179964921
+                        name: 'Jerome Windler'
+                        description: 'Iste id tempora temporibus velit. Ullam consequatur sit et consequatur aut. Ea aut et iusto.'
+                        image: iusto
+                        regular_price: 7309328972
+                        sale_price: 192037467
                         on_sale: true
-                        discount_percentage: 76417962.96
+                        discount_percentage: 71172915.05
                         is_favorite_for_current_user: false
-                      quantity: 9819361748
+                      quantity: 4348139201
                 properties:
                   data:
                     type: array
@@ -191,28 +304,28 @@ paths:
                         id: 1
                         product:
                           id: 6
-                          name: 'Mazie Hirthe'
-                          description: 'Harum id magni consectetur magni aut animi. Ut et totam voluptatum dolorum sit ut recusandae. Reprehenderit id eos praesentium veritatis adipisci qui. Laudantium et fuga distinctio sit.'
-                          image: quibusdam
-                          regular_price: 9992039654
-                          sale_price: 3386126609
+                          name: 'Stephania Funk'
+                          description: 'At voluptatem corrupti doloribus. Quos voluptatem qui autem doloribus velit velit nam consequatur. Veniam molestiae eligendi qui ut ut corporis. Id sed voluptatem ab tempora illo aut.'
+                          image: reiciendis
+                          regular_price: 3844961209
+                          sale_price: 3094587271
                           on_sale: true
-                          discount_percentage: 66059130.45
+                          discount_percentage: 7503739.38
                           is_favorite_for_current_user: false
-                        quantity: 5838298735
+                        quantity: 8433173102
                       -
                         id: 2
                         product:
                           id: 7
-                          name: 'Mrs. Krystel Lemke'
-                          description: 'Nulla dolor nam nostrum asperiores nihil optio totam. Eum ea et sint asperiores sint. Dolor velit necessitatibus voluptatibus quis ea necessitatibus. Dolores est nihil dolorum odio.'
-                          image: voluptatem
-                          regular_price: 9821761217
-                          sale_price: 2179964921
+                          name: 'Jerome Windler'
+                          description: 'Iste id tempora temporibus velit. Ullam consequatur sit et consequatur aut. Ea aut et iusto.'
+                          image: iusto
+                          regular_price: 7309328972
+                          sale_price: 192037467
                           on_sale: true
-                          discount_percentage: 76417962.96
+                          discount_percentage: 71172915.05
                           is_favorite_for_current_user: false
-                        quantity: 9819361748
+                        quantity: 4348139201
                     items:
                       type: object
                       properties:
@@ -227,31 +340,31 @@ paths:
                               example: 6
                             name:
                               type: string
-                              example: 'Mazie Hirthe'
+                              example: 'Stephania Funk'
                             description:
                               type: string
-                              example: 'Harum id magni consectetur magni aut animi. Ut et totam voluptatum dolorum sit ut recusandae. Reprehenderit id eos praesentium veritatis adipisci qui. Laudantium et fuga distinctio sit.'
+                              example: 'At voluptatem corrupti doloribus. Quos voluptatem qui autem doloribus velit velit nam consequatur. Veniam molestiae eligendi qui ut ut corporis. Id sed voluptatem ab tempora illo aut.'
                             image:
                               type: string
-                              example: quibusdam
+                              example: reiciendis
                             regular_price:
                               type: integer
-                              example: 9992039654
+                              example: 3844961209
                             sale_price:
                               type: integer
-                              example: 3386126609
+                              example: 3094587271
                             on_sale:
                               type: boolean
                               example: true
                             discount_percentage:
                               type: number
-                              example: 66059130.45
+                              example: 7503739.38
                             is_favorite_for_current_user:
                               type: boolean
                               example: false
                         quantity:
                           type: integer
-                          example: 5838298735
+                          example: 8433173102
       tags:
         - Cart
     post:
@@ -271,15 +384,15 @@ paths:
                     id: 1
                     product:
                       id: 6
-                      name: 'Dr. Jazmyn Hodkiewicz'
-                      description: 'Atque qui temporibus error sunt corrupti voluptatem quia. Consequatur a qui vero soluta. Asperiores rerum fuga et quam sint quis accusantium.'
-                      image: et
-                      regular_price: 3432345187
-                      sale_price: 5158090319
+                      name: 'Prof. Jarvis Legros'
+                      description: 'Ab quas ut provident perspiciatis quibusdam. Laborum quae explicabo veniam beatae cumque porro. Et cupiditate at sit repellendus accusantium occaecati.'
+                      image: odio
+                      regular_price: 4092627318
+                      sale_price: 8643504044
                       on_sale: true
-                      discount_percentage: -17257451.32
+                      discount_percentage: -45508767.26
                       is_favorite_for_current_user: false
-                    quantity: 4940410794
+                    quantity: 2273293124
                 properties:
                   data:
                     type: object
@@ -295,31 +408,31 @@ paths:
                             example: 6
                           name:
                             type: string
-                            example: 'Dr. Jazmyn Hodkiewicz'
+                            example: 'Prof. Jarvis Legros'
                           description:
                             type: string
-                            example: 'Atque qui temporibus error sunt corrupti voluptatem quia. Consequatur a qui vero soluta. Asperiores rerum fuga et quam sint quis accusantium.'
+                            example: 'Ab quas ut provident perspiciatis quibusdam. Laborum quae explicabo veniam beatae cumque porro. Et cupiditate at sit repellendus accusantium occaecati.'
                           image:
                             type: string
-                            example: et
+                            example: odio
                           regular_price:
                             type: integer
-                            example: 3432345187
+                            example: 4092627318
                           sale_price:
                             type: integer
-                            example: 5158090319
+                            example: 8643504044
                           on_sale:
                             type: boolean
                             example: true
                           discount_percentage:
                             type: number
-                            example: -17257451.32
+                            example: -45508767.26
                           is_favorite_for_current_user:
                             type: boolean
                             example: false
                       quantity:
                         type: integer
-                        example: 4940410794
+                        example: 2273293124
       tags:
         - Cart
       requestBody:
@@ -332,11 +445,11 @@ paths:
                 product_id:
                   type: integer
                   description: ''
-                  example: 13
+                  example: 6
                 quantity:
                   type: number
                   description: ''
-                  example: 6953195.2
+                  example: 48.30517
               required:
                 - product_id
                 - quantity
@@ -358,15 +471,15 @@ paths:
                     id: 1
                     product:
                       id: 6
-                      name: 'Ross Cremin'
-                      description: 'Ut eum natus incidunt. Occaecati in quasi quae ut eligendi in debitis. Quis consequatur eum quidem nam sequi consectetur occaecati.'
-                      image: et
-                      regular_price: 7150681287
-                      sale_price: 6957655617
+                      name: 'Irwin Kreiger'
+                      description: 'Aut dignissimos incidunt qui minus sed. Est at ut qui eaque fugit sint asperiores. Voluptas magnam nulla a provident qui nulla sed.'
+                      image: debitis
+                      regular_price: 2981988821
+                      sale_price: 3212459298
                       on_sale: true
-                      discount_percentage: 1930256.7
+                      discount_percentage: -2304704.77
                       is_favorite_for_current_user: false
-                    quantity: 4969904867
+                    quantity: 3275958715
                 properties:
                   data:
                     type: object
@@ -382,31 +495,31 @@ paths:
                             example: 6
                           name:
                             type: string
-                            example: 'Ross Cremin'
+                            example: 'Irwin Kreiger'
                           description:
                             type: string
-                            example: 'Ut eum natus incidunt. Occaecati in quasi quae ut eligendi in debitis. Quis consequatur eum quidem nam sequi consectetur occaecati.'
+                            example: 'Aut dignissimos incidunt qui minus sed. Est at ut qui eaque fugit sint asperiores. Voluptas magnam nulla a provident qui nulla sed.'
                           image:
                             type: string
-                            example: et
+                            example: debitis
                           regular_price:
                             type: integer
-                            example: 7150681287
+                            example: 2981988821
                           sale_price:
                             type: integer
-                            example: 6957655617
+                            example: 3212459298
                           on_sale:
                             type: boolean
                             example: true
                           discount_percentage:
                             type: number
-                            example: 1930256.7
+                            example: -2304704.77
                           is_favorite_for_current_user:
                             type: boolean
                             example: false
                       quantity:
                         type: integer
-                        example: 4969904867
+                        example: 3275958715
       tags:
         - Cart
       requestBody:
@@ -419,11 +532,11 @@ paths:
                 product_id:
                   type: integer
                   description: ''
-                  example: 7
+                  example: 11
                 quantity:
                   type: number
                   description: ''
-                  example: 122578616.29286
+                  example: 4053.1341185
               required:
                 - product_id
                 - quantity
@@ -442,7 +555,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the cart.'
-        example: 10
+        example: 16
         required: true
         schema:
           type: integer
@@ -463,20 +576,20 @@ paths:
                   data:
                     -
                       id: 6
-                      name: 'Prof. Antonina Kris'
+                      name: 'Abigail Lehner'
                     -
                       id: 7
-                      name: 'Lisandro Miller'
+                      name: 'Trenton Gleichner'
                 properties:
                   data:
                     type: array
                     example:
                       -
                         id: 6
-                        name: 'Prof. Antonina Kris'
+                        name: 'Abigail Lehner'
                       -
                         id: 7
-                        name: 'Lisandro Miller'
+                        name: 'Trenton Gleichner'
                     items:
                       type: object
                       properties:
@@ -485,7 +598,7 @@ paths:
                           example: 6
                         name:
                           type: string
-                          example: 'Prof. Antonina Kris'
+                          example: 'Abigail Lehner'
       tags:
         - Category
       security: []
@@ -619,23 +732,23 @@ paths:
                   data:
                     -
                       id: 6
-                      name: 'Citlalli Bosco'
-                      description: 'Id rerum minima molestiae illum ad quo. Quam rerum recusandae rem. Tempora vel omnis est explicabo est ut omnis.'
-                      image: similique
-                      regular_price: 1498465217
-                      sale_price: 8752602309
+                      name: 'Tanner Ledner DDS'
+                      description: 'Voluptas incidunt rerum esse autem et aut. Cupiditate quod neque enim aut. Voluptatem illum ad voluptas aut. Sunt ut nemo sunt ducimus facilis consequuntur.'
+                      image: consequatur
+                      regular_price: 5924110056
+                      sale_price: 3977015621
                       on_sale: true
-                      discount_percentage: -72541370.92
+                      discount_percentage: 19470944.35
                       is_favorite_for_current_user: false
                     -
                       id: 7
-                      name: 'Dr. Idell Powlowski Sr.'
-                      description: 'Autem magnam magnam et libero nesciunt voluptatem quaerat. Placeat omnis reprehenderit unde qui. Dolores reprehenderit id ullam voluptate. Et et iusto tempora dolorem.'
-                      image: nobis
-                      regular_price: 7859177923
-                      sale_price: 3174704277
+                      name: 'Nova Greenfelder'
+                      description: 'Dolorem voluptas voluptas aspernatur tenetur possimus. Itaque aliquid earum nihil eos quia. Assumenda et id harum ut. Veritatis sint dolor qui beatae.'
+                      image: repellat
+                      regular_price: 9548450316
+                      sale_price: 4529429001
                       on_sale: true
-                      discount_percentage: 46844736.46
+                      discount_percentage: 50190213.15
                       is_favorite_for_current_user: false
                 properties:
                   data:
@@ -643,23 +756,23 @@ paths:
                     example:
                       -
                         id: 6
-                        name: 'Citlalli Bosco'
-                        description: 'Id rerum minima molestiae illum ad quo. Quam rerum recusandae rem. Tempora vel omnis est explicabo est ut omnis.'
-                        image: similique
-                        regular_price: 1498465217
-                        sale_price: 8752602309
+                        name: 'Tanner Ledner DDS'
+                        description: 'Voluptas incidunt rerum esse autem et aut. Cupiditate quod neque enim aut. Voluptatem illum ad voluptas aut. Sunt ut nemo sunt ducimus facilis consequuntur.'
+                        image: consequatur
+                        regular_price: 5924110056
+                        sale_price: 3977015621
                         on_sale: true
-                        discount_percentage: -72541370.92
+                        discount_percentage: 19470944.35
                         is_favorite_for_current_user: false
                       -
                         id: 7
-                        name: 'Dr. Idell Powlowski Sr.'
-                        description: 'Autem magnam magnam et libero nesciunt voluptatem quaerat. Placeat omnis reprehenderit unde qui. Dolores reprehenderit id ullam voluptate. Et et iusto tempora dolorem.'
-                        image: nobis
-                        regular_price: 7859177923
-                        sale_price: 3174704277
+                        name: 'Nova Greenfelder'
+                        description: 'Dolorem voluptas voluptas aspernatur tenetur possimus. Itaque aliquid earum nihil eos quia. Assumenda et id harum ut. Veritatis sint dolor qui beatae.'
+                        image: repellat
+                        regular_price: 9548450316
+                        sale_price: 4529429001
                         on_sale: true
-                        discount_percentage: 46844736.46
+                        discount_percentage: 50190213.15
                         is_favorite_for_current_user: false
                     items:
                       type: object
@@ -669,25 +782,25 @@ paths:
                           example: 6
                         name:
                           type: string
-                          example: 'Citlalli Bosco'
+                          example: 'Tanner Ledner DDS'
                         description:
                           type: string
-                          example: 'Id rerum minima molestiae illum ad quo. Quam rerum recusandae rem. Tempora vel omnis est explicabo est ut omnis.'
+                          example: 'Voluptas incidunt rerum esse autem et aut. Cupiditate quod neque enim aut. Voluptatem illum ad voluptas aut. Sunt ut nemo sunt ducimus facilis consequuntur.'
                         image:
                           type: string
-                          example: similique
+                          example: consequatur
                         regular_price:
                           type: integer
-                          example: 1498465217
+                          example: 5924110056
                         sale_price:
                           type: integer
-                          example: 8752602309
+                          example: 3977015621
                         on_sale:
                           type: boolean
                           example: true
                         discount_percentage:
                           type: number
-                          example: -72541370.92
+                          example: 19470944.35
                         is_favorite_for_current_user:
                           type: boolean
                           example: false
@@ -709,13 +822,13 @@ paths:
                 example:
                   data:
                     id: 6
-                    name: 'Giovanni Reilly'
-                    description: 'Consequuntur incidunt et architecto fugit velit. Voluptatem aut magnam eum fugiat quam.'
-                    image: illo
-                    regular_price: 7003595333
-                    sale_price: 5579542939
+                    name: 'Herbert Langworth'
+                    description: 'Et magni iusto libero numquam officiis. Perferendis sed quae facilis ducimus inventore reprehenderit beatae.'
+                    image: dolorum
+                    regular_price: 1313728681
+                    sale_price: 2310446944
                     on_sale: true
-                    discount_percentage: 14240523.94
+                    discount_percentage: -9967182.63
                     is_favorite_for_current_user: false
                 properties:
                   data:
@@ -726,25 +839,25 @@ paths:
                         example: 6
                       name:
                         type: string
-                        example: 'Giovanni Reilly'
+                        example: 'Herbert Langworth'
                       description:
                         type: string
-                        example: 'Consequuntur incidunt et architecto fugit velit. Voluptatem aut magnam eum fugiat quam.'
+                        example: 'Et magni iusto libero numquam officiis. Perferendis sed quae facilis ducimus inventore reprehenderit beatae.'
                       image:
                         type: string
-                        example: illo
+                        example: dolorum
                       regular_price:
                         type: integer
-                        example: 7003595333
+                        example: 1313728681
                       sale_price:
                         type: integer
-                        example: 5579542939
+                        example: 2310446944
                       on_sale:
                         type: boolean
                         example: true
                       discount_percentage:
                         type: number
-                        example: 14240523.94
+                        example: -9967182.63
                       is_favorite_for_current_user:
                         type: boolean
                         example: false
@@ -776,23 +889,23 @@ paths:
                   data:
                     -
                       id: 6
-                      name: 'Dr. Gerhard Ruecker'
-                      description: 'Nam magnam expedita voluptas eveniet. Aut laborum id eius aliquid eos sapiente facere. Quasi occaecati ullam omnis molestias. Magnam maxime aut qui iusto quia.'
-                      image: ut
-                      regular_price: 3344735053
-                      sale_price: 3161531846
+                      name: 'Randy Christiansen'
+                      description: 'Qui pariatur ex consequatur sit ut. Ipsum dicta incidunt nostrum fuga est et non. Distinctio voluptatibus commodi et qui impedit omnis aut odio.'
+                      image: aliquid
+                      regular_price: 2148884685
+                      sale_price: 5171462872
                       on_sale: true
-                      discount_percentage: 1832032.07
+                      discount_percentage: -30225781.87
                       is_favorite_for_current_user: false
                     -
                       id: 7
-                      name: 'Prof. Ludwig Green'
-                      description: 'Est quis et fuga error exercitationem et nam. At labore et illum harum quas est. Dolores facilis voluptas ut impedit aliquid. Aperiam sunt id ut.'
-                      image: deleniti
-                      regular_price: 3849036886
-                      sale_price: 9407891076
+                      name: 'Lois Daniel I'
+                      description: 'Unde rem provident officia vitae. Numquam rerum iste reiciendis blanditiis. Quasi inventore fugit ut in impedit. Doloremque commodi et et maiores aliquam.'
+                      image: eligendi
+                      regular_price: 3754916323
+                      sale_price: 6316318430
                       on_sale: true
-                      discount_percentage: -55588541.9
+                      discount_percentage: -25614021.07
                       is_favorite_for_current_user: false
                 properties:
                   data:
@@ -800,23 +913,23 @@ paths:
                     example:
                       -
                         id: 6
-                        name: 'Dr. Gerhard Ruecker'
-                        description: 'Nam magnam expedita voluptas eveniet. Aut laborum id eius aliquid eos sapiente facere. Quasi occaecati ullam omnis molestias. Magnam maxime aut qui iusto quia.'
-                        image: ut
-                        regular_price: 3344735053
-                        sale_price: 3161531846
+                        name: 'Randy Christiansen'
+                        description: 'Qui pariatur ex consequatur sit ut. Ipsum dicta incidunt nostrum fuga est et non. Distinctio voluptatibus commodi et qui impedit omnis aut odio.'
+                        image: aliquid
+                        regular_price: 2148884685
+                        sale_price: 5171462872
                         on_sale: true
-                        discount_percentage: 1832032.07
+                        discount_percentage: -30225781.87
                         is_favorite_for_current_user: false
                       -
                         id: 7
-                        name: 'Prof. Ludwig Green'
-                        description: 'Est quis et fuga error exercitationem et nam. At labore et illum harum quas est. Dolores facilis voluptas ut impedit aliquid. Aperiam sunt id ut.'
-                        image: deleniti
-                        regular_price: 3849036886
-                        sale_price: 9407891076
+                        name: 'Lois Daniel I'
+                        description: 'Unde rem provident officia vitae. Numquam rerum iste reiciendis blanditiis. Quasi inventore fugit ut in impedit. Doloremque commodi et et maiores aliquam.'
+                        image: eligendi
+                        regular_price: 3754916323
+                        sale_price: 6316318430
                         on_sale: true
-                        discount_percentage: -55588541.9
+                        discount_percentage: -25614021.07
                         is_favorite_for_current_user: false
                     items:
                       type: object
@@ -826,25 +939,25 @@ paths:
                           example: 6
                         name:
                           type: string
-                          example: 'Dr. Gerhard Ruecker'
+                          example: 'Randy Christiansen'
                         description:
                           type: string
-                          example: 'Nam magnam expedita voluptas eveniet. Aut laborum id eius aliquid eos sapiente facere. Quasi occaecati ullam omnis molestias. Magnam maxime aut qui iusto quia.'
+                          example: 'Qui pariatur ex consequatur sit ut. Ipsum dicta incidunt nostrum fuga est et non. Distinctio voluptatibus commodi et qui impedit omnis aut odio.'
                         image:
                           type: string
-                          example: ut
+                          example: aliquid
                         regular_price:
                           type: integer
-                          example: 3344735053
+                          example: 2148884685
                         sale_price:
                           type: integer
-                          example: 3161531846
+                          example: 5171462872
                         on_sale:
                           type: boolean
                           example: true
                         discount_percentage:
                           type: number
-                          example: 1832032.07
+                          example: -30225781.87
                         is_favorite_for_current_user:
                           type: boolean
                           example: false
@@ -891,6 +1004,9 @@ paths:
         schema:
           type: integer
 tags:
+  -
+    name: Authentication
+    description: ''
   -
     name: Banner
     description: ''

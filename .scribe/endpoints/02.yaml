@@ -1,12 +1,12 @@
-name: Category
+name: Banner
 description: ''
 endpoints:
   -
     httpMethods:
       - GET
-    uri: api/categories
+    uri: api/banners
     metadata:
-      groupName: Category
+      groupName: Banner
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
@@ -27,9 +27,9 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":6,"name":"Prof. Antonina Kris"},{"id":7,"name":"Lisandro Miller"}]}'
+        content: '{"data":[{"id":6,"image":"http:\/\/127.0.0.1:8000\/storage\/sit"},{"id":7,"image":"http:\/\/127.0.0.1:8000\/storage\/officia"}]}'
         headers: []
-        description: 'Get all categories'
+        description: 'Get all banners'
         custom: []
     responseFields: []
     auth: []

@@ -66,6 +66,22 @@
                     <a href="#authenticating-requests">Authenticating requests</a>
                 </li>
                             </ul>
+                    <ul id="tocify-header-authentication" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authentication">
+                    <a href="#authentication">Authentication</a>
+                </li>
+                                    <ul id="tocify-subheader-authentication" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="authentication-POSTapi-login">
+                                <a href="#authentication-POSTapi-login">POST api/login</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-POSTapi-register">
+                                <a href="#authentication-POSTapi-register">POST api/register</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="authentication-POSTapi-logout">
+                                <a href="#authentication-POSTapi-logout">POST api/logout</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
                     <ul id="tocify-header-banner" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="banner">
                     <a href="#banner">Banner</a>
@@ -187,7 +203,463 @@ You can switch the language used with the tabs at the top right (or from the nav
         <h1 id="authenticating-requests">Authenticating requests</h1>
 <p>This API is not authenticated.</p>
 
-        <h1 id="banner">Banner</h1>
+        <h1 id="authentication">Authentication</h1>
+
+    
+
+                                <h2 id="authentication-POSTapi-login">POST api/login</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-login">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://127.0.0.1:8000/api/login" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"email\": \"yshields@example.com\",
+    \"password\": \"yuItz`#\\\\&lt;Rey[\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/login"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "email": "yshields@example.com",
+    "password": "yuItz`#\\&lt;Rey["
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-login">
+            <blockquote>
+            <p>Example response (200, if email and password is correct):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;token&quot;: &quot;1|dsakpodkaspokdopask&quot;
+}</code>
+ </pre>
+            <blockquote>
+            <p>Example response (400, if email and password is incorrect):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Email or password is wrong&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-login" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-login"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-login"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-login" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-login">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-login" data-method="POST"
+      data-path="api/login"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-login', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-login"
+                    onclick="tryItOut('POSTapi-login');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-login"
+                    onclick="cancelTryOut('POSTapi-login');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-login"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/login</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-login"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-login"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-login"
+               value="yshields@example.com"
+               data-component="body">
+    <br>
+<p>Must be a valid email address. Example: <code>yshields@example.com</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTapi-login"
+               value="yuItz`#\<Rey["
+               data-component="body">
+    <br>
+<p>Example: <code>yuItz</code>#\&lt;Rey[`</p>
+        </div>
+        </form>
+
+                    <h2 id="authentication-POSTapi-register">POST api/register</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-register">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://127.0.0.1:8000/api/register" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"dolorum\",
+    \"email\": \"jennyfer14@example.com\",
+    \"password\": \"H}QM5(2`m(]c3tmj\",
+    \"phone\": \"fugit\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/register"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "dolorum",
+    "email": "jennyfer14@example.com",
+    "password": "H}QM5(2`m(]c3tmj",
+    "phone": "fugit"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-register">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;token&quot;: &quot;1|dsakpodkaspokdopask&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-register" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-register"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-register"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-register" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-register">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-register" data-method="POST"
+      data-path="api/register"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-register', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-register"
+                    onclick="tryItOut('POSTapi-register');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-register"
+                    onclick="cancelTryOut('POSTapi-register');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-register"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/register</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-register"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-register"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>name</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="name"                data-endpoint="POSTapi-register"
+               value="dolorum"
+               data-component="body">
+    <br>
+<p>Example: <code>dolorum</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="email"                data-endpoint="POSTapi-register"
+               value="jennyfer14@example.com"
+               data-component="body">
+    <br>
+<p>Must be a valid email address. Example: <code>jennyfer14@example.com</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="password"                data-endpoint="POSTapi-register"
+               value="H}QM5(2`m(]c3tmj"
+               data-component="body">
+    <br>
+<p>Example: <code>H}QM5(2</code>m(]c3tmj`</p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>phone</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="phone"                data-endpoint="POSTapi-register"
+               value="fugit"
+               data-component="body">
+    <br>
+<p>Example: <code>fugit</code></p>
+        </div>
+        </form>
+
+                    <h2 id="authentication-POSTapi-logout">POST api/logout</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-logout">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://127.0.0.1:8000/api/logout" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://127.0.0.1:8000/api/logout"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-logout">
+            <blockquote>
+            <p>Example response (204):</p>
+        </blockquote>
+                <pre>
+<code>Empty response</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-logout" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-logout"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-logout"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-logout" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-logout">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-logout" data-method="POST"
+      data-path="api/logout"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-logout', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-logout"
+                    onclick="tryItOut('POSTapi-logout');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-logout"
+                    onclick="cancelTryOut('POSTapi-logout');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-logout"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/logout</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-logout"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-logout"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                <h1 id="banner">Banner</h1>
 
     
 
@@ -235,12 +707,12 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 7,
-            &quot;image&quot;: &quot;http://127.0.0.1:8000/storage/nobis&quot;
+            &quot;id&quot;: 6,
+            &quot;image&quot;: &quot;http://127.0.0.1:8000/storage/sit&quot;
         },
         {
-            &quot;id&quot;: 8,
-            &quot;image&quot;: &quot;http://127.0.0.1:8000/storage/qui&quot;
+            &quot;id&quot;: 7,
+            &quot;image&quot;: &quot;http://127.0.0.1:8000/storage/officia&quot;
         }
     ]
 }</code>
@@ -366,23 +838,23 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 11,
-            &quot;image&quot;: &quot;consequatur&quot;,
-            &quot;name&quot;: &quot;Jaleel Mayer I&quot;,
-            &quot;address&quot;: &quot;Quod sit harum tenetur sunt temporibus. Possimus nobis ratione explicabo ipsam voluptatibus dignissimos. Soluta quasi earum qui consequatur possimus aut.&quot;,
-            &quot;telephone&quot;: &quot;est&quot;,
-            &quot;phone&quot;: &quot;1-570-697-1305&quot;,
-            &quot;description&quot;: &quot;Et et autem est numquam quo dolor facilis officia. Corporis numquam voluptatem voluptatem incidunt cupiditate. Debitis similique magnam et eius quisquam est aut.&quot;,
+            &quot;image&quot;: &quot;dolorem&quot;,
+            &quot;name&quot;: &quot;Caroline Glover&quot;,
+            &quot;address&quot;: &quot;Tempore voluptatem sequi voluptates. Veniam et eum officiis nulla. Excepturi inventore ut molestias impedit tenetur nulla. Repellendus id sint amet officia.&quot;,
+            &quot;telephone&quot;: &quot;earum&quot;,
+            &quot;phone&quot;: &quot;501.385.2898&quot;,
+            &quot;description&quot;: &quot;Doloremque qui hic cumque quasi molestias dicta rem. Beatae dolore quasi sit aliquid.&quot;,
             &quot;categories&quot;: [],
             &quot;products&quot;: []
         },
         {
             &quot;id&quot;: 12,
-            &quot;image&quot;: &quot;consequatur&quot;,
-            &quot;name&quot;: &quot;Jaqueline Klocko III&quot;,
-            &quot;address&quot;: &quot;Esse debitis iure quisquam. Ratione fuga ipsa iusto et. Tenetur et officia magnam vitae eos vero. Necessitatibus ratione ullam modi est. Enim est harum temporibus sed.&quot;,
-            &quot;telephone&quot;: &quot;est&quot;,
-            &quot;phone&quot;: &quot;(602) 935-7595&quot;,
-            &quot;description&quot;: &quot;Quos voluptate rerum velit saepe velit. Et repudiandae sequi et temporibus maxime sed. Voluptatum libero necessitatibus ducimus et velit accusamus.&quot;,
+            &quot;image&quot;: &quot;vel&quot;,
+            &quot;name&quot;: &quot;Tatyana Boyer&quot;,
+            &quot;address&quot;: &quot;Molestiae deleniti impedit esse accusantium. Alias nesciunt blanditiis dolor quasi. Vel totam cumque aut nostrum modi est totam.&quot;,
+            &quot;telephone&quot;: &quot;aperiam&quot;,
+            &quot;phone&quot;: &quot;386-229-8613&quot;,
+            &quot;description&quot;: &quot;Itaque nisi dolorem aut exercitationem dolore sit. Cum laboriosam vitae ex odio deserunt. Enim ea accusantium atque. Beatae placeat est velit.&quot;,
             &quot;categories&quot;: [],
             &quot;products&quot;: []
         }
@@ -513,31 +985,31 @@ fetch(url, {
             &quot;id&quot;: 1,
             &quot;product&quot;: {
                 &quot;id&quot;: 6,
-                &quot;name&quot;: &quot;Mazie Hirthe&quot;,
-                &quot;description&quot;: &quot;Harum id magni consectetur magni aut animi. Ut et totam voluptatum dolorum sit ut recusandae. Reprehenderit id eos praesentium veritatis adipisci qui. Laudantium et fuga distinctio sit.&quot;,
-                &quot;image&quot;: &quot;quibusdam&quot;,
-                &quot;regular_price&quot;: 9992039654,
-                &quot;sale_price&quot;: 3386126609,
+                &quot;name&quot;: &quot;Stephania Funk&quot;,
+                &quot;description&quot;: &quot;At voluptatem corrupti doloribus. Quos voluptatem qui autem doloribus velit velit nam consequatur. Veniam molestiae eligendi qui ut ut corporis. Id sed voluptatem ab tempora illo aut.&quot;,
+                &quot;image&quot;: &quot;reiciendis&quot;,
+                &quot;regular_price&quot;: 3844961209,
+                &quot;sale_price&quot;: 3094587271,
                 &quot;on_sale&quot;: true,
-                &quot;discount_percentage&quot;: 66059130.45,
+                &quot;discount_percentage&quot;: 7503739.38,
                 &quot;is_favorite_for_current_user&quot;: false
             },
-            &quot;quantity&quot;: 5838298735
+            &quot;quantity&quot;: 8433173102
         },
         {
             &quot;id&quot;: 2,
             &quot;product&quot;: {
                 &quot;id&quot;: 7,
-                &quot;name&quot;: &quot;Mrs. Krystel Lemke&quot;,
-                &quot;description&quot;: &quot;Nulla dolor nam nostrum asperiores nihil optio totam. Eum ea et sint asperiores sint. Dolor velit necessitatibus voluptatibus quis ea necessitatibus. Dolores est nihil dolorum odio.&quot;,
-                &quot;image&quot;: &quot;voluptatem&quot;,
-                &quot;regular_price&quot;: 9821761217,
-                &quot;sale_price&quot;: 2179964921,
+                &quot;name&quot;: &quot;Jerome Windler&quot;,
+                &quot;description&quot;: &quot;Iste id tempora temporibus velit. Ullam consequatur sit et consequatur aut. Ea aut et iusto.&quot;,
+                &quot;image&quot;: &quot;iusto&quot;,
+                &quot;regular_price&quot;: 7309328972,
+                &quot;sale_price&quot;: 192037467,
                 &quot;on_sale&quot;: true,
-                &quot;discount_percentage&quot;: 76417962.96,
+                &quot;discount_percentage&quot;: 71172915.05,
                 &quot;is_favorite_for_current_user&quot;: false
             },
-            &quot;quantity&quot;: 9819361748
+            &quot;quantity&quot;: 4348139201
         }
     ]
 }</code>
@@ -632,8 +1104,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"product_id\": 13,
-    \"quantity\": 6953195.2
+    \"product_id\": 6,
+    \"quantity\": 48.30517
 }"
 </code></pre></div>
 
@@ -649,8 +1121,8 @@ const headers = {
 };
 
 let body = {
-    "product_id": 13,
-    "quantity": 6953195.2
+    "product_id": 6,
+    "quantity": 48.30517
 };
 
 fetch(url, {
@@ -672,16 +1144,16 @@ fetch(url, {
         &quot;id&quot;: 1,
         &quot;product&quot;: {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Dr. Jazmyn Hodkiewicz&quot;,
-            &quot;description&quot;: &quot;Atque qui temporibus error sunt corrupti voluptatem quia. Consequatur a qui vero soluta. Asperiores rerum fuga et quam sint quis accusantium.&quot;,
-            &quot;image&quot;: &quot;et&quot;,
-            &quot;regular_price&quot;: 3432345187,
-            &quot;sale_price&quot;: 5158090319,
+            &quot;name&quot;: &quot;Prof. Jarvis Legros&quot;,
+            &quot;description&quot;: &quot;Ab quas ut provident perspiciatis quibusdam. Laborum quae explicabo veniam beatae cumque porro. Et cupiditate at sit repellendus accusantium occaecati.&quot;,
+            &quot;image&quot;: &quot;odio&quot;,
+            &quot;regular_price&quot;: 4092627318,
+            &quot;sale_price&quot;: 8643504044,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: -17257451.32,
+            &quot;discount_percentage&quot;: -45508767.26,
             &quot;is_favorite_for_current_user&quot;: false
         },
-        &quot;quantity&quot;: 4940410794
+        &quot;quantity&quot;: 2273293124
     }
 }</code>
  </pre>
@@ -762,10 +1234,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_id"                data-endpoint="POSTapi-carts"
-               value="13"
+               value="6"
                data-component="body">
     <br>
-<p>Example: <code>13</code></p>
+<p>Example: <code>6</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -773,10 +1245,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="quantity"                data-endpoint="POSTapi-carts"
-               value="6953195.2"
+               value="48.30517"
                data-component="body">
     <br>
-<p>Example: <code>6953195.2</code></p>
+<p>Example: <code>48.30517</code></p>
         </div>
         </form>
 
@@ -794,19 +1266,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://127.0.0.1:8000/api/carts/10" \
+    "http://127.0.0.1:8000/api/carts/16" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"product_id\": 7,
-    \"quantity\": 122578616.29286
+    \"product_id\": 11,
+    \"quantity\": 4053.1341185
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://127.0.0.1:8000/api/carts/10"
+    "http://127.0.0.1:8000/api/carts/16"
 );
 
 const headers = {
@@ -815,8 +1287,8 @@ const headers = {
 };
 
 let body = {
-    "product_id": 7,
-    "quantity": 122578616.29286
+    "product_id": 11,
+    "quantity": 4053.1341185
 };
 
 fetch(url, {
@@ -838,16 +1310,16 @@ fetch(url, {
         &quot;id&quot;: 1,
         &quot;product&quot;: {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Ross Cremin&quot;,
-            &quot;description&quot;: &quot;Ut eum natus incidunt. Occaecati in quasi quae ut eligendi in debitis. Quis consequatur eum quidem nam sequi consectetur occaecati.&quot;,
-            &quot;image&quot;: &quot;et&quot;,
-            &quot;regular_price&quot;: 7150681287,
-            &quot;sale_price&quot;: 6957655617,
+            &quot;name&quot;: &quot;Irwin Kreiger&quot;,
+            &quot;description&quot;: &quot;Aut dignissimos incidunt qui minus sed. Est at ut qui eaque fugit sint asperiores. Voluptas magnam nulla a provident qui nulla sed.&quot;,
+            &quot;image&quot;: &quot;debitis&quot;,
+            &quot;regular_price&quot;: 2981988821,
+            &quot;sale_price&quot;: 3212459298,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: 1930256.7,
+            &quot;discount_percentage&quot;: -2304704.77,
             &quot;is_favorite_for_current_user&quot;: false
         },
-        &quot;quantity&quot;: 4969904867
+        &quot;quantity&quot;: 3275958715
     }
 }</code>
  </pre>
@@ -932,10 +1404,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="id"                data-endpoint="PUTapi-carts--id-"
-               value="10"
+               value="16"
                data-component="url">
     <br>
-<p>The ID of the cart. Example: <code>10</code></p>
+<p>The ID of the cart. Example: <code>16</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -944,10 +1416,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="product_id"                data-endpoint="PUTapi-carts--id-"
-               value="7"
+               value="11"
                data-component="body">
     <br>
-<p>Example: <code>7</code></p>
+<p>Example: <code>11</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>quantity</code></b>&nbsp;&nbsp;
@@ -955,10 +1427,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="quantity"                data-endpoint="PUTapi-carts--id-"
-               value="122578616.29286"
+               value="4053.1341185"
                data-component="body">
     <br>
-<p>Example: <code>122578616.29286</code></p>
+<p>Example: <code>4053.1341185</code></p>
         </div>
         </form>
 
@@ -1138,11 +1610,11 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Prof. Antonina Kris&quot;
+            &quot;name&quot;: &quot;Abigail Lehner&quot;
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;Lisandro Miller&quot;
+            &quot;name&quot;: &quot;Trenton Gleichner&quot;
         }
     ]
 }</code>
@@ -1658,24 +2130,24 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Citlalli Bosco&quot;,
-            &quot;description&quot;: &quot;Id rerum minima molestiae illum ad quo. Quam rerum recusandae rem. Tempora vel omnis est explicabo est ut omnis.&quot;,
-            &quot;image&quot;: &quot;similique&quot;,
-            &quot;regular_price&quot;: 1498465217,
-            &quot;sale_price&quot;: 8752602309,
+            &quot;name&quot;: &quot;Tanner Ledner DDS&quot;,
+            &quot;description&quot;: &quot;Voluptas incidunt rerum esse autem et aut. Cupiditate quod neque enim aut. Voluptatem illum ad voluptas aut. Sunt ut nemo sunt ducimus facilis consequuntur.&quot;,
+            &quot;image&quot;: &quot;consequatur&quot;,
+            &quot;regular_price&quot;: 5924110056,
+            &quot;sale_price&quot;: 3977015621,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: -72541370.92,
+            &quot;discount_percentage&quot;: 19470944.35,
             &quot;is_favorite_for_current_user&quot;: false
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;Dr. Idell Powlowski Sr.&quot;,
-            &quot;description&quot;: &quot;Autem magnam magnam et libero nesciunt voluptatem quaerat. Placeat omnis reprehenderit unde qui. Dolores reprehenderit id ullam voluptate. Et et iusto tempora dolorem.&quot;,
-            &quot;image&quot;: &quot;nobis&quot;,
-            &quot;regular_price&quot;: 7859177923,
-            &quot;sale_price&quot;: 3174704277,
+            &quot;name&quot;: &quot;Nova Greenfelder&quot;,
+            &quot;description&quot;: &quot;Dolorem voluptas voluptas aspernatur tenetur possimus. Itaque aliquid earum nihil eos quia. Assumenda et id harum ut. Veritatis sint dolor qui beatae.&quot;,
+            &quot;image&quot;: &quot;repellat&quot;,
+            &quot;regular_price&quot;: 9548450316,
+            &quot;sale_price&quot;: 4529429001,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: 46844736.46,
+            &quot;discount_percentage&quot;: 50190213.15,
             &quot;is_favorite_for_current_user&quot;: false
         }
     ]
@@ -1810,13 +2282,13 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: {
         &quot;id&quot;: 6,
-        &quot;name&quot;: &quot;Giovanni Reilly&quot;,
-        &quot;description&quot;: &quot;Consequuntur incidunt et architecto fugit velit. Voluptatem aut magnam eum fugiat quam.&quot;,
-        &quot;image&quot;: &quot;illo&quot;,
-        &quot;regular_price&quot;: 7003595333,
-        &quot;sale_price&quot;: 5579542939,
+        &quot;name&quot;: &quot;Herbert Langworth&quot;,
+        &quot;description&quot;: &quot;Et magni iusto libero numquam officiis. Perferendis sed quae facilis ducimus inventore reprehenderit beatae.&quot;,
+        &quot;image&quot;: &quot;dolorum&quot;,
+        &quot;regular_price&quot;: 1313728681,
+        &quot;sale_price&quot;: 2310446944,
         &quot;on_sale&quot;: true,
-        &quot;discount_percentage&quot;: 14240523.94,
+        &quot;discount_percentage&quot;: -9967182.63,
         &quot;is_favorite_for_current_user&quot;: false
     }
 }</code>
@@ -1951,24 +2423,24 @@ fetch(url, {
     &quot;data&quot;: [
         {
             &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Dr. Gerhard Ruecker&quot;,
-            &quot;description&quot;: &quot;Nam magnam expedita voluptas eveniet. Aut laborum id eius aliquid eos sapiente facere. Quasi occaecati ullam omnis molestias. Magnam maxime aut qui iusto quia.&quot;,
-            &quot;image&quot;: &quot;ut&quot;,
-            &quot;regular_price&quot;: 3344735053,
-            &quot;sale_price&quot;: 3161531846,
+            &quot;name&quot;: &quot;Randy Christiansen&quot;,
+            &quot;description&quot;: &quot;Qui pariatur ex consequatur sit ut. Ipsum dicta incidunt nostrum fuga est et non. Distinctio voluptatibus commodi et qui impedit omnis aut odio.&quot;,
+            &quot;image&quot;: &quot;aliquid&quot;,
+            &quot;regular_price&quot;: 2148884685,
+            &quot;sale_price&quot;: 5171462872,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: 1832032.07,
+            &quot;discount_percentage&quot;: -30225781.87,
             &quot;is_favorite_for_current_user&quot;: false
         },
         {
             &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;Prof. Ludwig Green&quot;,
-            &quot;description&quot;: &quot;Est quis et fuga error exercitationem et nam. At labore et illum harum quas est. Dolores facilis voluptas ut impedit aliquid. Aperiam sunt id ut.&quot;,
-            &quot;image&quot;: &quot;deleniti&quot;,
-            &quot;regular_price&quot;: 3849036886,
-            &quot;sale_price&quot;: 9407891076,
+            &quot;name&quot;: &quot;Lois Daniel I&quot;,
+            &quot;description&quot;: &quot;Unde rem provident officia vitae. Numquam rerum iste reiciendis blanditiis. Quasi inventore fugit ut in impedit. Doloremque commodi et et maiores aliquam.&quot;,
+            &quot;image&quot;: &quot;eligendi&quot;,
+            &quot;regular_price&quot;: 3754916323,
+            &quot;sale_price&quot;: 6316318430,
             &quot;on_sale&quot;: true,
-            &quot;discount_percentage&quot;: -55588541.9,
+            &quot;discount_percentage&quot;: -25614021.07,
             &quot;is_favorite_for_current_user&quot;: false
         }
     ]
