@@ -27,7 +27,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":6,"name":"Antonette Bernier"},{"id":7,"name":"Beth Walker"}]}'
+        content: '{"data":[{"id":6,"name":"Prof. Antonina Kris"},{"id":7,"name":"Lisandro Miller"}]}'
         headers: []
         description: 'Get all categories'
         custom: []

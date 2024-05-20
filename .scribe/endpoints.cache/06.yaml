@@ -39,7 +39,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":6,"name":"Hilda Connelly","description":"Quo blanditiis neque tempora non. Ipsa aut sunt perspiciatis ratione perferendis rerum esse. Est dicta veritatis magnam sunt id quia eum voluptas.","image":"repudiandae","regular_price":7405067410,"sale_price":3245844092,"on_sale":true,"discount_percentage":41592233.18,"is_favorite_for_current_user":false},{"id":7,"name":"Morris Jones DVM","description":"Debitis reprehenderit magni praesentium. Dolores in corporis deserunt commodi enim quia. Sequi dignissimos earum itaque.","image":"natus","regular_price":7288047711,"sale_price":3164999915,"on_sale":true,"discount_percentage":41230477.96,"is_favorite_for_current_user":false}]}'
+        content: '{"data":[{"id":6,"name":"Citlalli Bosco","description":"Id rerum minima molestiae illum ad quo. Quam rerum recusandae rem. Tempora vel omnis est explicabo est ut omnis.","image":"similique","regular_price":1498465217,"sale_price":8752602309,"on_sale":true,"discount_percentage":-72541370.92,"is_favorite_for_current_user":false},{"id":7,"name":"Dr. Idell Powlowski Sr.","description":"Autem magnam magnam et libero nesciunt voluptatem quaerat. Placeat omnis reprehenderit unde qui. Dolores reprehenderit id ullam voluptate. Et et iusto tempora dolorem.","image":"nobis","regular_price":7859177923,"sale_price":3174704277,"on_sale":true,"discount_percentage":46844736.46,"is_favorite_for_current_user":false}]}'
         headers: []
         description: 'Get all products'
         custom: []
@@ -85,7 +85,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"id":6,"name":"Zetta Hammes DVM","description":"Voluptate sunt sit voluptate ea temporibus quis ut. Ex reprehenderit recusandae incidunt qui temporibus. Dolores alias aut repellendus ullam iure et. Et ut quaerat eveniet sit optio eaque.","image":"laboriosam","regular_price":4838856367,"sale_price":3363140134,"on_sale":true,"discount_percentage":14757162.33,"is_favorite_for_current_user":false}}'
+        content: '{"data":{"id":6,"name":"Giovanni Reilly","description":"Consequuntur incidunt et architecto fugit velit. Voluptatem aut magnam eum fugiat quam.","image":"illo","regular_price":7003595333,"sale_price":5579542939,"on_sale":true,"discount_percentage":14240523.94,"is_favorite_for_current_user":false}}'
         headers: []
         description: 'Get single product'
         custom: []
@@ -121,7 +121,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":6,"name":"Caroline D''Amore PhD","description":"Qui rem consequuntur officia facilis quo. Corrupti ipsam aut doloribus ea. Vero autem praesentium ullam repellat exercitationem rerum quibusdam. Suscipit rem et nam.","image":"nostrum","regular_price":219269605,"sale_price":8695606104,"on_sale":true,"discount_percentage":-84763364.99,"is_favorite_for_current_user":false},{"id":7,"name":"Stan Jacobi","description":"Vero omnis alias aperiam rerum veritatis dolore dignissimos ad. Quibusdam aut quas consequatur magni ipsum. Magni autem quo error sequi.","image":"ea","regular_price":6501894479,"sale_price":4932397191,"on_sale":true,"discount_percentage":15694972.88,"is_favorite_for_current_user":false}]}'
+        content: '{"data":[{"id":6,"name":"Dr. Gerhard Ruecker","description":"Nam magnam expedita voluptas eveniet. Aut laborum id eius aliquid eos sapiente facere. Quasi occaecati ullam omnis molestias. Magnam maxime aut qui iusto quia.","image":"ut","regular_price":3344735053,"sale_price":3161531846,"on_sale":true,"discount_percentage":1832032.07,"is_favorite_for_current_user":false},{"id":7,"name":"Prof. Ludwig Green","description":"Est quis et fuga error exercitationem et nam. At labore et illum harum quas est. Dolores facilis voluptas ut impedit aliquid. Aperiam sunt id ut.","image":"deleniti","regular_price":3849036886,"sale_price":9407891076,"on_sale":true,"discount_percentage":-55588541.9,"is_favorite_for_current_user":false}]}'
         headers: []
         description: 'Get all favorite products for the current logged in user'
         custom: []

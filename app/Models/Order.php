@@ -32,6 +32,10 @@ class Order extends Model
         'user_id' => 'integer',
     ];
 
+    protected $with = [
+        'orderItems'
+    ];
+
     public function orderItems(): HasMany
     {
         return $this->hasMany(OrderItem::class);

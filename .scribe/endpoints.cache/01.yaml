@@ -29,7 +29,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"id":7,"image":"http:\/\/127.0.0.1:8000\/storage\/sapiente"},{"id":8,"image":"http:\/\/127.0.0.1:8000\/storage\/omnis"}]}'
+        content: '{"data":[{"id":7,"image":"http:\/\/127.0.0.1:8000\/storage\/nobis"},{"id":8,"image":"http:\/\/127.0.0.1:8000\/storage\/qui"}]}'
         headers: []
         description: 'Get all banners'
         custom: []

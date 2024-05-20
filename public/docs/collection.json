@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "4c2bcd84-d5ff-4aa8-adc1-b0c7be298efd",
+        "_postman_id": "07a5f380-0c00-4280-9d27-d1a6121b2c09",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -49,7 +49,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":7,\"image\":\"http:\\\/\\\/127.0.0.1:8000\\\/storage\\\/sapiente\"},{\"id\":8,\"image\":\"http:\\\/\\\/127.0.0.1:8000\\\/storage\\\/omnis\"}]}",
+                            "body": "{\"data\":[{\"id\":7,\"image\":\"http:\\\/\\\/127.0.0.1:8000\\\/storage\\\/nobis\"},{\"id\":8,\"image\":\"http:\\\/\\\/127.0.0.1:8000\\\/storage\\\/qui\"}]}",
                             "name": "Get all banners"
                         }
                     ]
@@ -90,7 +90,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":11,\"image\":\"dolor\",\"name\":\"Tyler Blick\",\"address\":\"Culpa quo qui ad dolor dolorem molestias omnis. Cupiditate voluptatem illum similique eveniet optio veniam et. Qui qui consequatur in ut. Rerum quam non beatae.\",\"telephone\":\"omnis\",\"phone\":\"+1 (725) 691-0322\",\"description\":\"Quidem recusandae quo eveniet quae. Rerum incidunt optio omnis eos velit aliquam. Nisi suscipit ut a minus est occaecati libero. Nisi omnis eius et ipsam maiores qui ex.\",\"categories\":[],\"products\":[]},{\"id\":12,\"image\":\"officiis\",\"name\":\"Mason Christiansen IV\",\"address\":\"Quo molestiae omnis vero. Cum incidunt voluptates reprehenderit doloribus eligendi odit. Aut omnis impedit aliquid excepturi voluptas totam accusantium.\",\"telephone\":\"ut\",\"phone\":\"1-425-598-6146\",\"description\":\"Ut dignissimos qui dolorem enim voluptas sit. Fuga illum qui asperiores vero. Quos facere placeat sint deserunt asperiores sint.\",\"categories\":[],\"products\":[]}]}",
+                            "body": "{\"data\":[{\"id\":11,\"image\":\"consequatur\",\"name\":\"Jaleel Mayer I\",\"address\":\"Quod sit harum tenetur sunt temporibus. Possimus nobis ratione explicabo ipsam voluptatibus dignissimos. Soluta quasi earum qui consequatur possimus aut.\",\"telephone\":\"est\",\"phone\":\"1-570-697-1305\",\"description\":\"Et et autem est numquam quo dolor facilis officia. Corporis numquam voluptatem voluptatem incidunt cupiditate. Debitis similique magnam et eius quisquam est aut.\",\"categories\":[],\"products\":[]},{\"id\":12,\"image\":\"consequatur\",\"name\":\"Jaqueline Klocko III\",\"address\":\"Esse debitis iure quisquam. Ratione fuga ipsa iusto et. Tenetur et officia magnam vitae eos vero. Necessitatibus ratione ullam modi est. Enim est harum temporibus sed.\",\"telephone\":\"est\",\"phone\":\"(602) 935-7595\",\"description\":\"Quos voluptate rerum velit saepe velit. Et repudiandae sequi et temporibus maxime sed. Voluptatum libero necessitatibus ducimus et velit accusamus.\",\"categories\":[],\"products\":[]}]}",
                             "name": "Get all brands"
                         }
                     ]
@@ -128,7 +128,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":1,\"product\":{\"id\":6,\"name\":\"Joaquin Herman\",\"description\":\"Voluptatum amet nihil id quas rerum dolor. Praesentium quos et sit fugit. Voluptas modi deleniti et libero sit et quo.\",\"image\":\"laborum\",\"regular_price\":2451658860,\"sale_price\":3011574867,\"on_sale\":true,\"discount_percentage\":-5599160.07,\"is_favorite_for_current_user\":false},\"quantity\":2692673296},{\"id\":2,\"product\":{\"id\":7,\"name\":\"Arvilla Green\",\"description\":\"Quia aut adipisci maiores nemo molestiae velit assumenda. Ea voluptatum autem aliquam illum minus dignissimos. Vel non in blanditiis quia soluta.\",\"image\":\"consequuntur\",\"regular_price\":5168149957,\"sale_price\":4425293591,\"on_sale\":true,\"discount_percentage\":7428563.66,\"is_favorite_for_current_user\":false},\"quantity\":2707819283}]}",
+                            "body": "{\"data\":[{\"id\":1,\"product\":{\"id\":6,\"name\":\"Mazie Hirthe\",\"description\":\"Harum id magni consectetur magni aut animi. Ut et totam voluptatum dolorum sit ut recusandae. Reprehenderit id eos praesentium veritatis adipisci qui. Laudantium et fuga distinctio sit.\",\"image\":\"quibusdam\",\"regular_price\":9992039654,\"sale_price\":3386126609,\"on_sale\":true,\"discount_percentage\":66059130.45,\"is_favorite_for_current_user\":false},\"quantity\":5838298735},{\"id\":2,\"product\":{\"id\":7,\"name\":\"Mrs. Krystel Lemke\",\"description\":\"Nulla dolor nam nostrum asperiores nihil optio totam. Eum ea et sint asperiores sint. Dolor velit necessitatibus voluptatibus quis ea necessitatibus. Dolores est nihil dolorum odio.\",\"image\":\"voluptatem\",\"regular_price\":9821761217,\"sale_price\":2179964921,\"on_sale\":true,\"discount_percentage\":76417962.96,\"is_favorite_for_current_user\":false},\"quantity\":9819361748}]}",
                             "name": "Get all cart items of the logged in user"
                         }
                     ]
@@ -155,7 +155,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"product_id\":4,\"quantity\":7875223.93181969}"
+                            "raw": "{\"product_id\":13,\"quantity\":6953195.2}"
                         },
                         "description": ""
                     },
@@ -163,7 +163,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":1,\"product\":{\"id\":6,\"name\":\"Darlene Schinner Sr.\",\"description\":\"Vel id aut tempora veritatis. Et quibusdam animi omnis. Sunt aut maiores excepturi hic dolorem assumenda beatae.\",\"image\":\"tempore\",\"regular_price\":9200382371,\"sale_price\":6370260089,\"on_sale\":true,\"discount_percentage\":28301222.82,\"is_favorite_for_current_user\":false},\"quantity\":6320242931}}",
+                            "body": "{\"data\":{\"id\":1,\"product\":{\"id\":6,\"name\":\"Dr. Jazmyn Hodkiewicz\",\"description\":\"Atque qui temporibus error sunt corrupti voluptatem quia. Consequatur a qui vero soluta. Asperiores rerum fuga et quam sint quis accusantium.\",\"image\":\"et\",\"regular_price\":3432345187,\"sale_price\":5158090319,\"on_sale\":true,\"discount_percentage\":-17257451.32,\"is_favorite_for_current_user\":false},\"quantity\":4940410794}}",
                             "name": "create new cart item for the logged in user"
                         }
                     ]
@@ -180,7 +180,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "7",
+                                    "value": "10",
                                     "description": "The ID of the cart."
                                 }
                             ]
@@ -198,7 +198,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"product_id\":13,\"quantity\":49.275}"
+                            "raw": "{\"product_id\":7,\"quantity\":122578616.29286}"
                         },
                         "description": ""
                     },
@@ -206,7 +206,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":1,\"product\":{\"id\":6,\"name\":\"Prof. Mia Renner DVM\",\"description\":\"Et architecto asperiores dolor harum. Facilis et et consequatur consequuntur veritatis. Vitae excepturi perferendis delectus voluptatem at voluptatem veniam. Ea deserunt quo ipsam omnis non.\",\"image\":\"aperiam\",\"regular_price\":8967565706,\"sale_price\":9895451757,\"on_sale\":true,\"discount_percentage\":-9278860.51,\"is_favorite_for_current_user\":false},\"quantity\":3028654588}}",
+                            "body": "{\"data\":{\"id\":1,\"product\":{\"id\":6,\"name\":\"Ross Cremin\",\"description\":\"Ut eum natus incidunt. Occaecati in quasi quae ut eligendi in debitis. Quis consequatur eum quidem nam sequi consectetur occaecati.\",\"image\":\"et\",\"regular_price\":7150681287,\"sale_price\":6957655617,\"on_sale\":true,\"discount_percentage\":1930256.7,\"is_favorite_for_current_user\":false},\"quantity\":4969904867}}",
                             "name": "update a cart item for the logged in user"
                         }
                     ]
@@ -223,7 +223,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "12",
                                     "description": "The ID of the cart."
                                 }
                             ]
@@ -287,7 +287,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":6,\"name\":\"Antonette Bernier\"},{\"id\":7,\"name\":\"Beth Walker\"}]}",
+                            "body": "{\"data\":[{\"id\":6,\"name\":\"Prof. Antonina Kris\"},{\"id\":7,\"name\":\"Lisandro Miller\"}]}",
                             "name": "Get all categories"
                         }
                     ]
@@ -373,30 +373,14 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
+                            "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":1,\"user_id\":7},{\"id\":2,\"user_id\":8},{\"id\":3,\"user_id\":9},{\"id\":4,\"user_id\":10},{\"id\":5,\"user_id\":11}]}",
-                            "name": ""
+                            "body": "{\"data\":[{\"id\":6,\"user_id\":12,\"order_items\":[]},{\"id\":7,\"user_id\":13,\"order_items\":[]}]}",
+                            "name": "Get all orders of the logged in user"
                         }
                     ]
                 },
@@ -420,16 +404,17 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"user_id\":8}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "body": null,
+                        "description": ""
                     },
-                    "response": []
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":6,\"user_id\":12,\"order_items\":[]}}",
+                            "name": "create a new order for the logged in user"
+                        }
+                    ]
                 }
             ]
         },
@@ -471,7 +456,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":6,\"name\":\"Hilda Connelly\",\"description\":\"Quo blanditiis neque tempora non. Ipsa aut sunt perspiciatis ratione perferendis rerum esse. Est dicta veritatis magnam sunt id quia eum voluptas.\",\"image\":\"repudiandae\",\"regular_price\":7405067410,\"sale_price\":3245844092,\"on_sale\":true,\"discount_percentage\":41592233.18,\"is_favorite_for_current_user\":false},{\"id\":7,\"name\":\"Morris Jones DVM\",\"description\":\"Debitis reprehenderit magni praesentium. Dolores in corporis deserunt commodi enim quia. Sequi dignissimos earum itaque.\",\"image\":\"natus\",\"regular_price\":7288047711,\"sale_price\":3164999915,\"on_sale\":true,\"discount_percentage\":41230477.96,\"is_favorite_for_current_user\":false}]}",
+                            "body": "{\"data\":[{\"id\":6,\"name\":\"Citlalli Bosco\",\"description\":\"Id rerum minima molestiae illum ad quo. Quam rerum recusandae rem. Tempora vel omnis est explicabo est ut omnis.\",\"image\":\"similique\",\"regular_price\":1498465217,\"sale_price\":8752602309,\"on_sale\":true,\"discount_percentage\":-72541370.92,\"is_favorite_for_current_user\":false},{\"id\":7,\"name\":\"Dr. Idell Powlowski Sr.\",\"description\":\"Autem magnam magnam et libero nesciunt voluptatem quaerat. Placeat omnis reprehenderit unde qui. Dolores reprehenderit id ullam voluptate. Et et iusto tempora dolorem.\",\"image\":\"nobis\",\"regular_price\":7859177923,\"sale_price\":3174704277,\"on_sale\":true,\"discount_percentage\":46844736.46,\"is_favorite_for_current_user\":false}]}",
                             "name": "Get all products"
                         }
                     ]
@@ -511,7 +496,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":{\"id\":6,\"name\":\"Zetta Hammes DVM\",\"description\":\"Voluptate sunt sit voluptate ea temporibus quis ut. Ex reprehenderit recusandae incidunt qui temporibus. Dolores alias aut repellendus ullam iure et. Et ut quaerat eveniet sit optio eaque.\",\"image\":\"laboriosam\",\"regular_price\":4838856367,\"sale_price\":3363140134,\"on_sale\":true,\"discount_percentage\":14757162.33,\"is_favorite_for_current_user\":false}}",
+                            "body": "{\"data\":{\"id\":6,\"name\":\"Giovanni Reilly\",\"description\":\"Consequuntur incidunt et architecto fugit velit. Voluptatem aut magnam eum fugiat quam.\",\"image\":\"illo\",\"regular_price\":7003595333,\"sale_price\":5579542939,\"on_sale\":true,\"discount_percentage\":14240523.94,\"is_favorite_for_current_user\":false}}",
                             "name": "Get single product"
                         }
                     ]
@@ -543,7 +528,7 @@
                         {
                             "header": [],
                             "code": 200,
-                            "body": "{\"data\":[{\"id\":6,\"name\":\"Caroline D'Amore PhD\",\"description\":\"Qui rem consequuntur officia facilis quo. Corrupti ipsam aut doloribus ea. Vero autem praesentium ullam repellat exercitationem rerum quibusdam. Suscipit rem et nam.\",\"image\":\"nostrum\",\"regular_price\":219269605,\"sale_price\":8695606104,\"on_sale\":true,\"discount_percentage\":-84763364.99,\"is_favorite_for_current_user\":false},{\"id\":7,\"name\":\"Stan Jacobi\",\"description\":\"Vero omnis alias aperiam rerum veritatis dolore dignissimos ad. Quibusdam aut quas consequatur magni ipsum. Magni autem quo error sequi.\",\"image\":\"ea\",\"regular_price\":6501894479,\"sale_price\":4932397191,\"on_sale\":true,\"discount_percentage\":15694972.88,\"is_favorite_for_current_user\":false}]}",
+                            "body": "{\"data\":[{\"id\":6,\"name\":\"Dr. Gerhard Ruecker\",\"description\":\"Nam magnam expedita voluptas eveniet. Aut laborum id eius aliquid eos sapiente facere. Quasi occaecati ullam omnis molestias. Magnam maxime aut qui iusto quia.\",\"image\":\"ut\",\"regular_price\":3344735053,\"sale_price\":3161531846,\"on_sale\":true,\"discount_percentage\":1832032.07,\"is_favorite_for_current_user\":false},{\"id\":7,\"name\":\"Prof. Ludwig Green\",\"description\":\"Est quis et fuga error exercitationem et nam. At labore et illum harum quas est. Dolores facilis voluptas ut impedit aliquid. Aperiam sunt id ut.\",\"image\":\"deleniti\",\"regular_price\":3849036886,\"sale_price\":9407891076,\"on_sale\":true,\"discount_percentage\":-55588541.9,\"is_favorite_for_current_user\":false}]}",
                             "name": "Get all favorite products for the current logged in user"
                         }
                     ]
